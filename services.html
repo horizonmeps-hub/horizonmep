@@ -10,7 +10,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <base href="/horizonmep/">
 
   <style>
@@ -42,26 +41,26 @@
     section{padding:84px 20px}
     .wrap{max-width:1200px;margin:auto}
 
-    /* Hero */
     .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
     .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 16px}
     .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
 
-    /* Sections */
     .section-title{font-family:Poppins,sans-serif;font-size:30px;margin:0 0 12px}
     .section-sub{color:#475569;max-width:780px}
 
     .grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    .card{background:white;border-radius:18px;padding:28px 24px;box-shadow:0 10px 30px rgba(15,23,42,0.06);transition:transform .25s ease,box-shadow .25s ease}
+    .card{
+      background:white;border-radius:18px;padding:28px 24px;
+      box-shadow:0 10px 30px rgba(15,23,42,0.06);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
     .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,23,42,0.12)}
     .icon{width:56px;height:56px;border-radius:14px;background:var(--grad-main);display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px}
 
-    /* Discipline blocks */
     .discipline{margin-top:72px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
     .discipline ul{margin:16px 0 0;padding-left:18px;color:#475569}
     .discipline li{margin-bottom:8px}
 
-    /* CTA */
     .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
     .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
 
@@ -95,20 +94,41 @@
 <section class="page-hero">
   <div class="wrap">
     <h1>Engineering Services</h1>
-    <p>Integrated Mechanical, Electrical, Plumbing, Fire Protection and Fire Alarm engineering services designed to support permitting, coordination and construction across diverse project types.</p>
+    <p>Integrated Mechanical, Electrical, Plumbing, Fire Protection and Fire Alarm engineering services delivering coordinated, permit-ready construction documents.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <h2 class="section-title">Our Engineering Disciplines</h2>
-    <p class="section-sub">End-to-end MEP engineering solutions focused on constructability, code compliance and real-world buildability.</p>
+    <p class="section-sub">
+      Core MEP engineering services backed by code expertise, coordination experience, and construction-focused design.
+    </p>
 
     <div class="grid">
-      <div class="card"><div class="icon">M</div><h3>Mechanical Engineering</h3><p>HVAC system design, load calculations, equipment selection and energy compliance.</p></div>
-      <div class="card"><div class="icon">E</div><h3>Electrical Engineering</h3><p>Power distribution, lighting systems, EV charging and electrical code compliance.</p></div>
-      <div class="card"><div class="icon">P</div><h3>Plumbing Engineering</h3><p>Domestic water, sanitary, storm and gas piping system design.</p></div>
-      <div class="card"><div class="icon">F</div><h3>Fire Protection & Alarm</h3><p>Fire sprinkler layouts, hydraulic calculations and fire alarm system design.</p></div>
+      <a class="card" href="mechanical.html">
+        <div class="icon">M</div>
+        <h3>Mechanical Engineering</h3>
+        <p>HVAC system design, load calculations, equipment selection and energy compliance.</p>
+      </a>
+
+      <a class="card" href="electrical.html">
+        <div class="icon">E</div>
+        <h3>Electrical Engineering</h3>
+        <p>Power distribution, lighting systems, EV charging and NEC-compliant design.</p>
+      </a>
+
+      <a class="card" href="plumbing.html">
+        <div class="icon">P</div>
+        <h3>Plumbing Engineering</h3>
+        <p>Domestic water, sanitary, storm drainage and gas piping systems.</p>
+      </a>
+
+      <a class="card" href="fire.html">
+        <div class="icon">F</div>
+        <h3>Fire Protection & Fire Alarm</h3>
+        <p>Sprinkler layouts, hydraulic calculations and fire alarm system design.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -118,59 +138,23 @@
 
     <div class="discipline">
       <div>
-        <h2 class="section-title">Mechanical Engineering</h2>
-        <p class="section-sub">Efficient, code-compliant HVAC solutions designed for occupant comfort and energy performance.</p>
+        <h2 class="section-title">Beyond Core Engineering</h2>
+        <p class="section-sub">
+          Need fast-turn calculations, permit revisions, or drafting support?
+          Explore our <strong>On-Demand Project Support</strong> services.
+        </p>
         <ul>
-          <li>HVAC load calculations (Trace 3D, HAP)</li>
-          <li>System design for commercial & residential buildings</li>
-          <li>Equipment sizing and selection</li>
-          <li>Mechanical layouts and details</li>
-          <li>Title-24 (California) compliance</li>
+          <li>Energy load calculation letters</li>
+          <li>Title-24 & COMcheck compliance</li>
+          <li>Permit resubmittals & AHJ responses</li>
+          <li>MEP drafting & staff augmentation</li>
         </ul>
+        <div style="margin-top:16px">
+          <a class="nav-cta" href="on-demand.html">Explore On-Demand Support</a>
+        </div>
       </div>
-      <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df54?auto=format&fit=crop&w=900&q=80" alt="Mechanical engineering design">
-    </div>
 
-    <div class="discipline">
-      <div>
-        <h2 class="section-title">Electrical Engineering</h2>
-        <p class="section-sub">Reliable electrical systems supporting modern building power and lighting demands.</p>
-        <ul>
-          <li>Electrical load calculations and panel schedules</li>
-          <li>Interior and exterior lighting design</li>
-          <li>Lighting controls and energy code compliance</li>
-          <li>EV charging infrastructure design</li>
-        </ul>
-      </div>
-      <img src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=900&q=80" alt="Electrical engineering design">
-    </div>
-
-    <div class="discipline">
-      <div>
-        <h2 class="section-title">Plumbing Engineering</h2>
-        <p class="section-sub">Plumbing systems designed for performance, safety and long-term reliability.</p>
-        <ul>
-          <li>Domestic water and hot water systems</li>
-          <li>Sanitary and storm drainage design</li>
-          <li>Gas piping systems</li>
-          <li>Fixture schedules and riser diagrams</li>
-        </ul>
-      </div>
-      <img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&w=900&q=80" alt="Plumbing engineering design">
-    </div>
-
-    <div class="discipline">
-      <div>
-        <h2 class="section-title">Fire Protection & Fire Alarm</h2>
-        <p class="section-sub">Life safety systems aligned with NFPA standards and AHJ requirements.</p>
-        <ul>
-          <li>Fire sprinkler layout design</li>
-          <li>Hydraulic calculations</li>
-          <li>Fire alarm system layouts</li>
-          <li>Code-compliant permit documentation</li>
-        </ul>
-      </div>
-      <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=80" alt="Fire protection engineering">
+      <img src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=900&q=80" alt="MEP coordination">
     </div>
 
   </div>
@@ -178,8 +162,10 @@
 
 <section class="cta">
   <h2>Need Engineering Support for Your Project?</h2>
-  <p>Tell us about your scope and timeline — our team will respond within 24–48 hours.</p>
-  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request a Quote</a></div>
+  <p>Share your scope and timeline — our team will respond within 24–48 hours.</p>
+  <div style="margin-top:28px">
+    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+  </div>
 </section>
 
 <footer>
