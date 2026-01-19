@@ -1,68 +1,150 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mechanical Engineering — Horizon MEP</title>
-<meta name="description" content="Mechanical engineering services — HVAC load calculations, Trace 3D, HAP, Title-24 compliance." />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  :root{--blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3}
-  body{margin:0;font-family:Inter;background:#fff;color:#071826}
-  header{padding:18px 6%; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(90deg,#000,#3533cd); color:#fff}
-  .hero{padding:40px 6%; display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap}
-  .hero-left{max-width:760px}
-  h1{font-family:Poppins, sans-serif;margin:0 0 8px}
-  p.lead{color:#2b3b45}
-  .features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; padding:20px 6%}
-  .f{background:linear-gradient(180deg,#fbfdff,#fff); padding:14px; border-radius:10px; box-shadow:0 8px 20px rgba(11,18,30,0.04)}
-  .specs{padding:18px 6%; background:#f8fbff; border-top:1px solid #eef3fb}
-  .cta{display:inline-block;padding:12px 16px;border-radius:10px;background:linear-gradient(90deg,var(--blue),var(--orange)); color:white;text-decoration:none;font-weight:700}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mechanical Engineering | Horizon MEP</title>
+  <meta name="description" content="Mechanical engineering services including HVAC system design, Trace 3D and HAP load calculations, equipment selection, and Title-24 compliance." />
+
+  <meta name="theme-color" content="#3533cd" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <base href="/horizonmep/">
+
+  <style>
+    :root{
+      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
+      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
+      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:#0b1a2b;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
+    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
+    .brand img{height:40px}
+    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
+    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+
+    section{padding:84px 20px}
+    .wrap{max-width:1200px;margin:auto}
+
+    /* Hero */
+    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
+    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 14px}
+    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
+
+    /* Content blocks */
+    .content{margin-top:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+    .card{background:white;border-radius:18px;padding:28px 26px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+    .card h3{margin-top:0}
+    .card ul{margin:12px 0 0;padding-left:18px;color:#475569}
+    .card li{margin-bottom:8px}
+
+    /* Highlights */
+    .highlights{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .highlight{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:18px;padding:24px;border:1px solid #eef2f7}
+
+    /* CTA */
+    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
+    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
+
+    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
+    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+
+    @media(max-width:1024px){
+      .content{grid-template-columns:1fr}
+      .highlights{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){.highlights{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
+
 <header>
-  <img src="logo.png" alt="logo" style="height:48px">
-  <nav><a href="services" style="color:white;text-decoration:none;margin-right:12px" target="_top" rel="noopener">Back to Services</a></nav>
+  <div class="nav">
+    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="nav-links">
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="hero-left">
+<section class="page-hero">
+  <div class="wrap">
     <h1>Mechanical Engineering & HVAC Design</h1>
-    <p class="lead">Construction-ready HVAC drawings, load calculations (Trace 3D / HAP), equipment selection, ductwork coordination and Title-24 compliance for California projects.</p>
-    <a class="cta" href="request-quote" target="_top" rel="noopener">Request Mechanical Proposal</a>
+    <p>Construction-ready mechanical designs focused on occupant comfort, energy efficiency, and code compliance across commercial and residential projects.</p>
   </div>
+</section>
 
-  <div style="min-width:320px;max-width:420px">
-    <div style="background:linear-gradient(90deg,#fff,#f7fbff); padding:18px;border-radius:12px; box-shadow:0 8px 24px rgba(11,18,30,0.05)">
-      <h4 style="margin:0 0 8px">Deliverables</h4>
-      <ul style="margin:0;padding-left:18px;color:#334155">
-        <li>Load calculations (Trace 3D / HAP)</li>
-        <li>HVAC layout drawings & schedules</li>
-        <li>Equipment selection & coordination</li>
-        <li>Mechanical COMcheck & Envelope COMcheck</li>
-      </ul>
+<section>
+  <div class="wrap">
+    <div class="content">
+      <div class="card">
+        <h3>Mechanical Engineering Services</h3>
+        <p>We deliver coordinated HVAC designs that integrate seamlessly with architectural and structural systems while meeting jurisdictional requirements.</p>
+        <ul>
+          <li>HVAC load calculations (Trace 3D, HAP)</li>
+          <li>System design for commercial, residential and mixed-use buildings</li>
+          <li>Equipment sizing and selection</li>
+          <li>Mechanical layouts, details and schedules</li>
+          <li>Title-24 (California) compliance documentation</li>
+          <li>Mechanical COMcheck & Envelope COMcheck</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Typical Deliverables</h3>
+        <ul>
+          <li>Heating and cooling load calculation reports</li>
+          <li>HVAC floor plans and riser diagrams</li>
+          <li>Equipment schedules and control diagrams</li>
+          <li>Permit-ready mechanical drawing sets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight"><strong>Energy-Driven Design</strong><br>Efficient systems optimized for performance and compliance.</div>
+      <div class="highlight"><strong>Revit & CAD Coordination</strong><br>Integrated coordination with architectural and structural models.</div>
+      <div class="highlight"><strong>Code Expertise</strong><br>Deep familiarity with IMC, ASHRAE and Title-24 requirements.</div>
+      <div class="highlight"><strong>Permit Support</strong><br>Clear, review-ready documents and AHJ coordination.</div>
     </div>
   </div>
 </section>
 
-<section class="features" aria-label="mechanical features">
-  <div class="f"><strong>Trace 3D / HAP</strong><p style="margin:8px 0 0">Certified load calculations & energy modeling.</p></div>
-  <div class="f"><strong>Revit Coordination</strong><p style="margin:8px 0 0">We coordinate MEP models with architectural and structural trades.</p></div>
-  <div class="f"><strong>Title-24 Expertise</strong><p style="margin:8px 0 0">California code compliance and documentation.</p></div>
-  <div class="f"><strong>Permit Support</strong><p style="margin:8px 0 0">We prepare permit-ready packages and support AHJ reviews.</p></div>
+<section class="cta">
+  <h2>Need Mechanical Engineering Support?</h2>
+  <p>Share your project details and timeline — our team will respond within 24–48 hours.</p>
+  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request Mechanical Proposal</a></div>
 </section>
 
-<section class="specs">
-  <h3 style="margin:0 0 6px">Typical Project Process</h3>
-  <ol style="margin:8px 0 0;padding-left:18px;color:#334155">
-    <li>Initial project intake & code review</li>
-    <li>Preliminary load calcs & equipment selection</li>
-    <li>Design and coordination (Revit/CAD)</li>
-    <li>Final permit documents & support</li>
-  </ol>
-</section>
+<footer>
+  <div class="footer-wrap">
+    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
+    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+  </div>
+</footer>
 
-<footer style="padding:18px 6%; color:#475569">© Horizon MEP — Mechanical Services • <a href="index" target="_top" rel="noopener">Home</a></footer>
 </body>
 </html>
