@@ -22,19 +22,9 @@
        Safe for mobile, iOS, Android
        No JS, GPU-friendly
     ======================*/
-    @keyframes fadeUp {
-      from { opacity:0; transform: translateY(16px); }
-      to   { opacity:1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity:0; }
-      to   { opacity:1; }
-    }
-    @keyframes floatSoft {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
-    }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(16px);} to { opacity:1; transform: translateY(0);} }
+    @keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+    @keyframes floatSoft { 0%{transform:translateY(0);} 50%{transform:translateY(-6px);} 100%{transform:translateY(0);} }
 
     .anim-fade-up{ animation: fadeUp .7s ease-out both; }
     .anim-fade-in{ animation: fadeIn .6s ease-out both; }
@@ -42,9 +32,7 @@
     .anim-delay-2{ animation-delay: .3s; }
     .anim-delay-3{ animation-delay: .45s; }
 
-    @media (prefers-reduced-motion: reduce){
-      *{ animation:none !important; transition:none !important; }
-    }
+    @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
 
     :root{
       --black:#000000;
@@ -87,125 +75,86 @@
 
     /* Mobile menu toggle */
     #menu-toggle{display:none}
-    .menu-icon{
-      display:none; font-size:26px; color:white; cursor:pointer;
-    }
+    .menu-icon{ display:none; font-size:26px; color:white; cursor:pointer; }
 
     .nav-links{
       display:flex; gap:22px; align-items:center;
       font-weight:500; color:#e5e7eb;
     }
     .nav-links a:hover{color:white}
-    .nav-cta{
-      padding:10px 16px; border-radius:10px;
-      background:var(--grad-accent); color:white; font-weight:600;
-    }
+    .nav-cta{ padding:10px 16px; border-radius:10px; background:var(--grad-accent); color:white; font-weight:600; }
 
     /* Hero */
-    .hero{
-      background:var(--grad-main);
-      color:white;
-      padding:96px 20px 72px;
-    }
-    .hero-wrap{
-      max-width:1200px; margin:auto;
-      display:grid; grid-template-columns:1.1fr 0.9fr;
-      gap:48px; align-items:center;
-    }
-    .hero h1{
-      font-family:Poppins, sans-serif;
-      font-size:clamp(32px, 4vw, 48px);
-      line-height:1.05; margin:0 0 18px;
-    }
-    .hero p{font-size:18px; color:#e5e7eb; max-width:560px}
+    .hero{ background:var(--grad-main); color:white; padding:96px 20px 72px; }
+    .hero-wrap{ max-width:1200px; margin:auto; display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center; }
+    .hero h1{ font-family:Poppins, sans-serif; font-size:clamp(32px, 4vw, 48px); line-height:1.05; margin:0 0 18px; }
+    .hero p{ font-size:18px; color:#e5e7eb; max-width:560px; }
 
-    .hero-actions{margin-top:28px; display:flex; gap:16px; flex-wrap:wrap}
-    .btn-primary{background:var(--grad-accent); color:white; padding:14px 22px; border-radius:12px; font-weight:600}
-    .btn-secondary{border:1.5px solid rgba(255,255,255,0.25); color:white; padding:14px 22px; border-radius:12px}
+    .hero-actions{ margin-top:28px; display:flex; gap:16px; flex-wrap:wrap; }
+    .btn-primary{ background:var(--grad-accent); color:white; padding:14px 22px; border-radius:12px; font-weight:600; }
+    .btn-secondary{ border:1.5px solid rgba(255,255,255,0.25); color:white; padding:14px 22px; border-radius:12px; }
 
-    .hero-metrics{margin-top:36px; display:flex; gap:32px; flex-wrap:wrap; font-size:14px; color:#e5e7eb}
-    .metric strong{display:block; font-size:20px; color:white}
+    .hero-metrics{ margin-top:36px; display:flex; gap:32px; flex-wrap:wrap; font-size:14px; color:#e5e7eb; }
+    .metric strong{ display:block; font-size:20px; color:white; }
 
-    .hero-visual{
-      background:rgba(255,255,255,0.06);
-      border-radius:18px; padding:18px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.35);
-    }
+    .hero-visual{ background:rgba(255,255,255,0.06); border-radius:18px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.35); }
 
     /* Sections */
-    section{padding:84px 20px}
-    .section-wrap{max-width:1200px; margin:auto}
-    .section-title{font-family:Poppins, sans-serif; font-size:32px; margin:0 0 12px}
-    .section-sub{color:#475569; max-width:720px}
+    section{ padding:84px 20px; }
+    .section-wrap{ max-width:1200px; margin:auto; }
+    .section-title{ font-family:Poppins, sans-serif; font-size:32px; margin:0 0 12px; }
+    .section-sub{ color:#475569; max-width:720px; }
 
     /* Services */
-    .services{margin-top:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px}
-    .service-card{
-      background:white; border-radius:18px; padding:28px 24px;
-      box-shadow:0 10px 30px rgba(15,23,42,0.06);
-      transition:transform .25s ease, box-shadow .25s ease;
-    }
-    .service-card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(15,23,42,0.12)}
-    .service-icon{width:56px;height:56px;border-radius:14px;background:var(--grad-main);display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px}
-    .service-card h3{margin:0 0 8px}
-    .service-card p{margin:0;color:#475569}
+    .services{ margin-top:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    .service-card{ background:white; border-radius:18px; padding:28px 24px; box-shadow:0 10px 30px rgba(15,23,42,0.06); transition:transform .25s ease, box-shadow .25s ease; }
+    .service-card:hover{ transform:translateY(-6px); box-shadow:0 20px 40px rgba(15,23,42,0.12); }
+    .service-icon{ width:56px; height:56px; border-radius:14px; background:var(--grad-main); display:flex; align-items:center; justify-content:center; color:white; font-size:22px; margin-bottom:16px; }
+    .service-card h3{ margin:0 0 8px; }
+    .service-card p{ margin:0; color:#475569; }
 
     /* Process */
-    .process{margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:32px}
-    .step{background:linear-gradient(180deg,#ffffff,#f9fbff); border-radius:18px; padding:26px; border:1px solid #eef2f7}
-    .step span{display:inline-block; margin-bottom:12px; color:var(--blue); font-weight:700}
+    .process{ margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+    .step{ background:linear-gradient(180deg,#ffffff,#f9fbff); border-radius:18px; padding:26px; border:1px solid #eef2f7; }
+    .step span{ display:inline-block; margin-bottom:12px; color:var(--blue); font-weight:700; }
 
     /* CTA */
-    .cta{background:var(--grad-accent); color:white; text-align:center; padding:84px 20px}
-    .cta h2{font-family:Poppins, sans-serif; font-size:clamp(28px,4vw,36px); margin-bottom:16px}
+    .cta{ background:var(--grad-accent); color:white; text-align:center; padding:84px 20px; }
+    .cta h2{ font-family:Poppins, sans-serif; font-size:clamp(28px,4vw,36px); margin-bottom:16px; }
 
     /* Footer */
-    footer{background:#020617; color:#cbd5f5; padding:36px 20px}
-    .footer-wrap{max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px}
+    footer{ background:#020617; color:#cbd5f5; padding:36px 20px; }
+    .footer-wrap{ max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; }
 
     /* Tablet */
-    @media (max-width:1024px){
-      .hero-wrap{grid-template-columns:1fr}
-      .services{grid-template-columns:repeat(2,1fr)}
-      .process{grid-template-columns:1fr}
-    }
+    @media (max-width:1024px){ .hero-wrap{grid-template-columns:1fr} .services{grid-template-columns:repeat(2,1fr)} .process{grid-template-columns:1fr} }
 
     /* Mobile */
     @media (max-width:768px){
       .menu-icon{display:block}
-      .nav-links{
-        position:absolute; top:64px; right:20px;
-        background:#020617; border-radius:14px;
-        flex-direction:column; padding:18px;
-        display:none; width:220px
-      }
+      .nav-links{ position:absolute; top:64px; right:20px; background:#020617; border-radius:14px; flex-direction:column; padding:18px; display:none; width:220px }
       #menu-toggle:checked + .menu-icon + .nav-links{display:flex}
       .hero{padding:72px 16px 56px}
       .hero p{font-size:16px}
       section{padding:64px 16px}
     }
 
-    @media (max-width:520px){
-      .services{grid-template-columns:1fr}
-      .hero-metrics{gap:18px}
-    }
+    @media (max-width:520px){ .services{grid-template-columns:1fr} .hero-metrics{gap:18px} }
   </style>
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand">
-      <img src="logo.png" alt="Horizon MEP logo">
-      Horizon MEP
-    </div>
+    <div class="brand"><img src="logo.png" alt="Horizon MEP logo">Horizon MEP</div>
 
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">☰</label>
 
     <div class="nav-links">
       <a href="/horizonmep/">Home</a>
-      <a href="services.html">Services</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -222,7 +171,7 @@
       <p class="anim-fade-up anim-delay-1">Horizon MEP delivers coordinated Mechanical, Electrical, Plumbing and Fire Protection designs that help architects, developers and contractors move faster — from concept to permit approval.</p>
       <div class="hero-actions anim-fade-up anim-delay-2">
         <a class="btn-primary" href="request-quote.html">Request a Quote</a>
-        <a class="btn-secondary" href="services.html">Explore Services</a>
+        <a class="btn-secondary" href="services.html">Explore Engineering Services</a>
       </div>
       <div class="hero-metrics anim-fade-up anim-delay-3">
         <div class="metric"><strong>24–48 hrs</strong>Proposal turnaround</div>
@@ -237,6 +186,7 @@
   </div>
 </section>
 
+<!-- ENGINEERING SERVICES -->
 <section>
   <div class="section-wrap">
     <h2 class="section-title">Our Core Engineering Services</h2>
@@ -251,7 +201,25 @@
   </div>
 </section>
 
+<!-- ON-DEMAND PROJECT SUPPORT -->
 <section style="background:white">
+  <div class="section-wrap">
+    <h2 class="section-title">On-Demand Project Support</h2>
+    <p class="section-sub">Fast-response engineering and production support to help project teams meet deadlines, respond to AHJ comments, and scale resources efficiently.</p>
+
+    <div class="services anim-fade-up">
+      <div class="service-card"><div class="service-icon">⚡</div><h3>Energy & Compliance Support</h3><p>Energy load calculation letters, Title‑24 documentation, COMcheck reports, and AHJ compliance responses.</p></div>
+      <div class="service-card"><div class="service-icon">📄</div><h3>Permit Revisions & Resubmittals</h3><p>Rapid permit revisions, redline updates, and response‑to‑comments support.</p></div>
+      <div class="service-card"><div class="service-icon">📐</div><h3>MEP Drafting & BIM Support</h3><p>AutoCAD and Revit drafting support aligned with your standards and workflows.</p></div>
+      <div class="service-card"><div class="service-icon">👷</div><h3>Staff Augmentation</h3><p>On‑demand engineering and design resources for peak workloads and tight schedules.</p></div>
+    </div>
+
+    <div style="margin-top:36px"><a class="btn-primary" href="on-demand.html">Explore On‑Demand Support</a></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
   <div class="section-wrap">
     <h2 class="section-title">How We Work</h2>
     <p class="section-sub">A structured, engineering‑first process that reduces RFIs and accelerates approvals.</p>
@@ -263,6 +231,7 @@
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta anim-fade-in">
   <h2>Have an Upcoming Project?</h2>
   <p>Share your drawings and scope — we’ll respond within 24–48 hours.</p>
