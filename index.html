@@ -17,6 +17,35 @@
   <base href="/horizonmep/">
 
   <style>
+    /* =====================
+       Subtle Micro-Animations
+       Safe for mobile, iOS, Android
+       No JS, GPU-friendly
+    ======================*/
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(16px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity:0; }
+      to   { opacity:1; }
+    }
+    @keyframes floatSoft {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    .anim-fade-up{ animation: fadeUp .7s ease-out both; }
+    .anim-fade-in{ animation: fadeIn .6s ease-out both; }
+    .anim-delay-1{ animation-delay: .15s; }
+    .anim-delay-2{ animation-delay: .3s; }
+    .anim-delay-3{ animation-delay: .45s; }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ animation:none !important; transition:none !important; }
+    }
+
     :root{
       --black:#000000;
       --blue:#3533cd;
@@ -187,22 +216,22 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-wrap">
+  <div class="hero-wrap anim-fade-in">
     <div>
-      <h1>Permit-Ready MEP Engineering<br>Designed for Real-World Construction</h1>
-      <p>Horizon MEP delivers coordinated Mechanical, Electrical, Plumbing and Fire Protection designs that help architects, developers and contractors move faster — from concept to permit approval.</p>
-      <div class="hero-actions">
+      <h1 class="anim-fade-up">Permit-Ready MEP Engineering<br>Designed for Real-World Construction</h1>
+      <p class="anim-fade-up anim-delay-1">Horizon MEP delivers coordinated Mechanical, Electrical, Plumbing and Fire Protection designs that help architects, developers and contractors move faster — from concept to permit approval.</p>
+      <div class="hero-actions anim-fade-up anim-delay-2">
         <a class="btn-primary" href="request-quote.html">Request a Quote</a>
         <a class="btn-secondary" href="services.html">Explore Services</a>
       </div>
-      <div class="hero-metrics">
+      <div class="hero-metrics anim-fade-up anim-delay-3">
         <div class="metric"><strong>24–48 hrs</strong>Proposal turnaround</div>
         <div class="metric"><strong>Multi‑state</strong>Code experience</div>
         <div class="metric"><strong>Construction‑ready</strong>Deliverables</div>
       </div>
     </div>
 
-    <div class="hero-visual">
+    <div class="hero-visual anim-fade-in" style="animation: floatSoft 6s ease-in-out infinite;">
       <img src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=1200&q=80" alt="Engineering design workspace">
     </div>
   </div>
@@ -213,7 +242,7 @@
     <h2 class="section-title">Our Core Engineering Services</h2>
     <p class="section-sub">Integrated MEP and fire protection design services aligned with U.S. building codes and construction workflows.</p>
 
-    <div class="services">
+    <div class="services anim-fade-up">
       <div class="service-card"><div class="service-icon">M</div><h3>Mechanical</h3><p>HVAC load calculations, system design, equipment selection and Title‑24 compliance.</p></div>
       <div class="service-card"><div class="service-icon">E</div><h3>Electrical</h3><p>Power distribution, lighting design, EV charging and energy‑code compliance.</p></div>
       <div class="service-card"><div class="service-icon">P</div><h3>Plumbing</h3><p>Domestic water, sanitary, storm drainage and gas system design.</p></div>
@@ -226,7 +255,7 @@
   <div class="section-wrap">
     <h2 class="section-title">How We Work</h2>
     <p class="section-sub">A structured, engineering‑first process that reduces RFIs and accelerates approvals.</p>
-    <div class="process">
+    <div class="process anim-fade-up">
       <div class="step"><span>01</span><h3>Project Review</h3><p>Drawings, codes and jurisdictional requirements.</p></div>
       <div class="step"><span>02</span><h3>Design & Coordination</h3><p>Integrated MEP coordination with all disciplines.</p></div>
       <div class="step"><span>03</span><h3>Permit Support</h3><p>Permit‑ready documents and AHJ assistance.</p></div>
@@ -234,7 +263,7 @@
   </div>
 </section>
 
-<section class="cta">
+<section class="cta anim-fade-in">
   <h2>Have an Upcoming Project?</h2>
   <p>Share your drawings and scope — we’ll respond within 24–48 hours.</p>
   <div style="margin-top:28px"><a class="btn-primary" href="request-quote.html">Start Your Project</a></div>
