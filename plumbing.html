@@ -1,53 +1,149 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Plumbing Engineering — Horizon MEP</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  :root{--blue:#3533cd;--gray:#d3d8e3}
-  body{margin:0;font-family:Inter;background:#fff;color:#071826}
-  header{padding:16px 6%; background:linear-gradient(90deg,#000,#3533cd); color:white}
-  main{padding:36px 6%}
-  .hero{display:flex;gap:20px;flex-wrap:wrap}
-  .card{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(11,18,30,0.04)}
-  .list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
-  .btn{background:linear-gradient(90deg,var(--blue),#f2701e); color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Plumbing Engineering | Horizon MEP</title>
+  <meta name="description" content="Plumbing engineering services including domestic water, sanitary, storm drainage, gas piping, and code-compliant plumbing system design." />
+
+  <meta name="theme-color" content="#3533cd" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <base href="/horizonmep/">
+
+  <style>
+    :root{
+      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
+      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
+      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:#0b1a2b;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block;border-radius:16px}
+    a{text-decoration:none;color:inherit}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
+    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
+    .brand img{height:40px}
+    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
+    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+
+    section{padding:84px 20px}
+    .wrap{max-width:1200px;margin:auto}
+
+    /* Hero */
+    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
+    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 14px}
+    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
+
+    /* Content */
+    .content{margin-top:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+    .card{background:white;border-radius:18px;padding:28px 26px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+    .card ul{margin:12px 0 0;padding-left:18px;color:#475569}
+    .card li{margin-bottom:8px}
+
+    /* Highlights */
+    .highlights{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .highlight{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:18px;padding:24px;border:1px solid #eef2f7}
+
+    /* CTA */
+    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
+    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
+
+    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
+    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+
+    @media(max-width:1024px){
+      .content{grid-template-columns:1fr}
+      .highlights{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){.highlights{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
+
 <header>
-  <img src="logo.png" alt="logo" style="height:44px">
+  <div class="nav">
+    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="nav-links">
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    </div>
+  </div>
 </header>
 
-<main>
-  <h1 style="font-family:Poppins, sans-serif">Plumbing Engineering</h1>
-  <div class="hero">
-    <div style="flex:1">
-      <p>Designs focused on resilient, code-compliant water, sanitary and storm systems. We size pumps, interceptors and drainage systems to match building loads and operational needs.</p>
-      <a class="btn" href="request-quote" target="_top" rel="noopener">Request Plumbing Proposal</a>
-    </div>
-    <div style="min-width:260px">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Plumbing Engineering</h1>
+    <p>Plumbing system designs focused on safety, performance, and long-term reliability for commercial, residential, and institutional buildings.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="content">
       <div class="card">
-        <strong>Typical deliverables</strong>
-        <ul style="margin:8px 0 0;padding-left:18px;color:#334155">
-          <li>Sanitary & storm layout</li>
-          <li>Domestic water & hot water systems</li>
-          <li>Gas piping & load calcs</li>
-          <li>Grease interceptors & pump sizing</li>
+        <h3>Plumbing Engineering Services</h3>
+        <p>We design plumbing systems that support building operations, meet code requirements, and integrate efficiently with other disciplines.</p>
+        <ul>
+          <li>Domestic water and hot water system design</li>
+          <li>Sanitary and storm drainage layouts</li>
+          <li>Gas piping systems and load calculations</li>
+          <li>Grease interceptors and pump sizing</li>
+          <li>Plumbing riser diagrams and fixture schedules</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&w=1200&q=80" alt="Plumbing engineering coordination">
+        <h3 style="margin-top:18px">Typical Deliverables</h3>
+        <ul>
+          <li>Plumbing floor plans and riser diagrams</li>
+          <li>Fixture schedules and specifications</li>
+          <li>Equipment sizing calculations</li>
+          <li>Permit-ready plumbing drawings</li>
         </ul>
       </div>
     </div>
+
+    <div class="highlights">
+      <div class="highlight"><strong>Code Compliance</strong><br>Systems aligned with IPC, UPC and local plumbing codes.</div>
+      <div class="highlight"><strong>Water Efficiency</strong><br>Design strategies supporting conservation and sustainability.</div>
+      <div class="highlight"><strong>Specialty Systems</strong><br>Medical, laboratory and commercial kitchen coordination.</div>
+      <div class="highlight"><strong>Permit Support</strong><br>Clear documentation to streamline AHJ approvals.</div>
+    </div>
   </div>
+</section>
 
-  <section class="list" aria-label="plumbing specialties">
-    <div class="card"><strong>Water Conservation</strong><p style="margin-top:8px">Options for efficient fixtures, low-flow strategies and compliance with local codes.</p></div>
-    <div class="card"><strong>Medical & Lab</strong><p style="margin-top:8px">Specialized design coordination for clinical spaces and labs.</p></div>
-    <div class="card"><strong>Commercial Kitchens</strong><p style="margin-top:8px">Grease management and high-flow system design.</p></div>
-  </section>
-</main>
+<section class="cta">
+  <h2>Need Plumbing Engineering Support?</h2>
+  <p>Tell us about your project and schedule — our team will respond within 24–48 hours.</p>
+  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request Plumbing Proposal</a></div>
+</section>
 
-<footer style="padding:18px 6%; color:#475569">© Horizon MEP • <a href="services" target="_top" rel="noopener">Services</a></footer>
+<footer>
+  <div class="footer-wrap">
+    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
+    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+  </div>
+</footer>
+
 </body>
 </html>
