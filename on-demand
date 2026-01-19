@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>On-Demand Project Support | Horizon MEP</title>
+  <meta name="description" content="On-demand MEP project support services including energy load calculation letters, Title-24 compliance, permit resubmittals, drafting and staff augmentation." />
+
+  <meta name="theme-color" content="#3533cd" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <base href="/horizonmep/">
+
+  <style>
+    :root{
+      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
+      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
+      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:#0b1a2b;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
+    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
+    .brand img{height:40px}
+    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
+    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+
+    section{padding:84px 20px}
+    .wrap{max-width:1200px;margin:auto}
+
+    /* Hero */
+    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
+    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 16px}
+    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
+
+    /* Section */
+    .section-title{font-family:Poppins,sans-serif;font-size:30px;margin:0 0 12px}
+    .section-sub{color:#475569;max-width:760px}
+
+    .grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .card{background:white;border-radius:18px;padding:28px 24px;box-shadow:0 10px 30px rgba(15,23,42,0.06);transition:transform .25s ease,box-shadow .25s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,23,42,0.12)}
+    .icon{width:56px;height:56px;border-radius:14px;background:var(--grad-main);display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px}
+
+    /* Highlights */
+    .highlights{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    .highlight{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:18px;padding:28px;border:1px solid #eef2f7}
+
+    /* CTA */
+    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
+    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
+
+    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
+    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+
+    @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}.highlights{grid-template-columns:1fr}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="nav-links">
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>On-Demand Project Support</h1>
+    <p>Flexible, fast-response engineering and production support services that help architects, developers, and contractors resolve issues, respond to AHJ comments, and keep projects on schedule.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Energy & Compliance Support</h2>
+    <p class="section-sub">Specialized services commonly required during permitting, resubmittals, and regulatory reviews.</p>
+
+    <div class="grid">
+      <div class="card"><div class="icon">⚡</div><h3>Energy Load Calculation Letters</h3><p>Project-specific load calculation letters prepared to support permit and energy compliance submissions.</p></div>
+      <div class="card"><div class="icon">📘</div><h3>Title-24 Compliance</h3><p>NRCC, NRCI and supporting documentation for California energy code compliance.</p></div>
+      <div class="card"><div class="icon">🧾</div><h3>COMcheck Reports</h3><p>Mechanical, electrical and envelope COMcheck documentation for AHJ review.</p></div>
+      <div class="card"><div class="icon">📊</div><h3>Energy Modeling Support</h3><p>Energy modeling assistance to support design decisions and compliance requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:white">
+  <div class="wrap">
+    <h2 class="section-title">Permit & Delivery Support</h2>
+    <p class="section-sub">Rapid-response services designed to keep projects moving through review and construction phases.</p>
+
+    <div class="grid">
+      <div class="card"><div class="icon">📄</div><h3>Permit Revisions & Resubmittals</h3><p>Fast-turn updates to drawings, calculations and narratives based on AHJ comments.</p></div>
+      <div class="card"><div class="icon">✏️</div><h3>Redline & Markup Updates</h3><p>Clean incorporation of review comments, contractor feedback and coordination changes.</p></div>
+      <div class="card"><div class="icon">📐</div><h3>MEP Drafting & BIM Support</h3><p>AutoCAD and Revit drafting support aligned with your standards and templates.</p></div>
+      <div class="card"><div class="icon">👷</div><h3>Staff Augmentation</h3><p>Short-term engineering and design resources to support peak workloads.</p></div>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight"><strong>Fast Turnaround</strong><br>Designed for tight deadlines and urgent permit responses.</div>
+      <div class="highlight"><strong>Flexible Engagement</strong><br>Scale support up or down based on project needs.</div>
+      <div class="highlight"><strong>Standards Aligned</strong><br>Work delivered to your drawing standards and workflows.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Need Immediate Project Support?</h2>
+  <p>Share your scope and timeline — our team will respond within 24–48 hours.</p>
+  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request Support</a></div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
+    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+  </div>
+</footer>
+
+</body>
+</html>
