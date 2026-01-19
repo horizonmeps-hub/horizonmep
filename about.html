@@ -1,53 +1,238 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>About Us — Horizon MEP</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;font-family:Inter;background:#fff;color:#071826}
-  header{padding:14px 6%; background:linear-gradient(90deg,#000,#3533cd); color:white}
-  main{padding:28px 6%}
-  .team{display:grid;grid-template-columns:1fr 320px;gap:20px}
-  .bio{background:linear-gradient(180deg,#fff,#fbfdff);padding:16px;border-radius:12px}
-  .cred{background:#f8fbff;padding:12px;border-radius:10px}
-  .logo-row{display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap}
-  .logo-row img{height:36px;filter:grayscale(1);opacity:0.95}
-  @media (max-width:900px){.team{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>About Us | Horizon MEP</title>
+  <meta name="description" content="Horizon MEP is a U.S.-focused MEP engineering firm delivering coordinated, permit-ready Mechanical, Electrical, Plumbing, and Fire Protection designs." />
+
+  <meta name="theme-color" content="#3533cd" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <base href="/horizonmep/">
+
+  <style>
+    :root{
+      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
+      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
+      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+      background:var(--bg);
+      color:#0b1a2b;
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
+    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
+    .brand img{height:40px}
+    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
+    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+
+    section{padding:84px 20px}
+    .wrap{max-width:1200px;margin:auto}
+
+    /* Hero */
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-family:Poppins,sans-serif;
+      font-size:clamp(32px,4vw,44px);
+      margin:0 0 16px;
+    }
+    .page-hero p{
+      max-width:820px;
+      color:#e5e7eb;
+      font-size:18px;
+    }
+
+    /* Layout */
+    .two-col{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:48px;
+      align-items:start;
+    }
+
+    .card{
+      background:white;
+      border-radius:18px;
+      padding:32px;
+      box-shadow:0 12px 36px rgba(15,23,42,0.08);
+    }
+
+    h2{
+      font-family:Poppins,sans-serif;
+      margin:0 0 12px;
+    }
+
+    .muted{color:#475569}
+
+    ul{padding-left:18px;color:#475569}
+    li{margin-bottom:8px}
+
+    /* Value grid */
+    .values{
+      margin-top:48px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+    .value{
+      background:linear-gradient(180deg,#ffffff,#f9fbff);
+      border-radius:16px;
+      padding:24px;
+      border:1px solid #eef2f7;
+    }
+
+    /* CTA */
+    .cta{
+      background:var(--grad-accent);
+      color:white;
+      text-align:center;
+      padding:84px 20px;
+    }
+    .cta h2{
+      font-family:Poppins,sans-serif;
+      font-size:clamp(28px,4vw,36px);
+    }
+
+    footer{
+      background:#020617;
+      color:#cbd5f5;
+      padding:36px 20px;
+    }
+    .footer-wrap{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:24px;
+    }
+
+    @media(max-width:1024px){
+      .two-col{grid-template-columns:1fr}
+      .values{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-<header><img src="logo.png" alt="logo" style="height:44px"></header>
 
-<main>
-  <h1 style="font-family:Poppins, sans-serif">About Horizon MEP</h1>
-  <p style="color:#334155">We are an MEP design firm focused on producing construction-ready, code-first MEP & fire protection designs for architects, developers and contractors across the U.S.</p>
+<header>
+  <div class="nav">
+    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="nav-links">
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    </div>
+  </div>
+</header>
 
-  <div class="team">
-    <div class="bio">
-      <h3>Our Approach</h3>
-      <p style="color:#334155">We emphasize coordination, clarity and regulatory compliance. Our deliverables are designed to work on the jobsite — minimizing RFIs and change orders.</p>
-      <h4 style="margin-top:12px">Core Values</h4>
-      <ul style="padding-left:18px;color:#334155">
-        <li>Code-first engineering</li>
-        <li>Construction-oriented drawings</li>
-        <li>Fast response & collaboration</li>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>About Horizon MEP</h1>
+    <p>
+      Horizon MEP is a U.S.-focused MEP engineering firm delivering coordinated,
+      permit-ready Mechanical, Electrical, Plumbing, Fire Protection and Fire Alarm designs
+      for architects, developers, and contractors.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two-col">
+    <div class="card">
+      <h2>Who We Are</h2>
+      <p class="muted">
+        We partner with project teams across the United States to deliver
+        practical, construction-ready MEP solutions that align with real-world
+        build conditions and jurisdictional requirements.
+      </p>
+
+      <p class="muted">
+        Our focus is simple: reduce friction during permitting and construction
+        through clear documentation, disciplined coordination, and code-first engineering.
+      </p>
+
+      <h2 style="margin-top:24px">How We Work</h2>
+      <ul>
+        <li>Early review of architectural intent and jurisdictional codes</li>
+        <li>Integrated MEP coordination to minimize conflicts</li>
+        <li>Permit-ready documentation aligned with AHJ expectations</li>
+        <li>Responsive support through reviews and revisions</li>
       </ul>
     </div>
 
-    <aside class="cred">
-      <h4 style="margin:0 0 8px">Credentials</h4>
-      <p style="margin:0 0 10px;color:#334155">Licensed engineers, Title-24 experts and NFPA familiar designers. We provide sealed drawings for permit submission.</p>
-      <div class="logo-row" aria-hidden>
-        <img src="assets/client1.png" alt="">
-        <img src="assets/client2.png" alt="">
-        <img src="assets/client3.png" alt="">
-      </div>
-    </aside>
-  </div>
-</main>
+    <div class="card">
+      <h2>Credentials & Capability</h2>
+      <p class="muted">
+        Our team includes licensed engineers, Title-24 specialists,
+        and designers experienced in NFPA, NEC, IMC, IPC, and local amendments.
+      </p>
 
-<footer style="padding:18px 6%; color:#475569">© Horizon MEP • <a href="index" target="_top" rel="noopener">Home</a></footer>
+      <ul>
+        <li>Multi-state permitting experience</li>
+        <li>Residential, commercial, and mixed-use projects</li>
+        <li>Fire protection and fire alarm coordination</li>
+        <li>Energy compliance and documentation support</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap values">
+    <div class="value">
+      <strong>Engineering First</strong>
+      <p class="muted">Design decisions grounded in codes, constructability, and performance.</p>
+    </div>
+    <div class="value">
+      <strong>Coordination Focused</strong>
+      <p class="muted">Clear MEP integration that reduces RFIs and field conflicts.</p>
+    </div>
+    <div class="value">
+      <strong>Permit Driven</strong>
+      <p class="muted">Documents prepared with AHJ review and approval in mind.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Looking for a Reliable MEP Engineering Partner?</h2>
+  <p>Tell us about your project — we’ll respond within 24–48 hours.</p>
+  <div style="margin-top:28px">
+    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <strong>Horizon MEP</strong><br>
+      Professional MEP Engineering Services<br>
+      services@horizonmep.com
+    </div>
+    <div>
+      © 2026 Horizon MEP<br>
+      Serving clients across the United States
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
