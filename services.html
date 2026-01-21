@@ -3,130 +3,124 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Engineering Services | Horizon MEP</title>
   <meta name="description" content="Mechanical, Electrical, Plumbing, Fire Protection & Fire Alarm engineering services delivering permit-ready, code-compliant MEP designs across the U.S." />
 
   <meta name="theme-color" content="#3533cd" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base CSS (IMPORTANT: folder is CSS, not css) -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles ONLY -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    /* Page Hero */
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-size:clamp(32px,4vw,44px);
+      margin-bottom:16px;
+    }
+    .page-hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#e5e7eb;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
+    /* Discipline section */
+    .discipline{
+      margin-top:72px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:48px;
+      align-items:center;
     }
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
-
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
-    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
-    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 16px}
-    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
-
-    .section-title{font-family:Poppins,sans-serif;font-size:30px;margin:0 0 12px}
-    .section-sub{color:#475569;max-width:780px}
-
-    .grid{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    .card{
-      background:white;border-radius:18px;padding:28px 24px;
-      box-shadow:0 10px 30px rgba(15,23,42,0.06);
-      transition:transform .25s ease, box-shadow .25s ease;
+    .discipline ul{
+      margin:16px 0 0;
+      padding-left:18px;
+      color:#475569;
     }
-    .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,23,42,0.12)}
-    .icon{width:56px;height:56px;border-radius:14px;background:var(--grad-main);display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px}
-
-    .discipline{margin-top:72px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-    .discipline ul{margin:16px 0 0;padding-left:18px;color:#475569}
-    .discipline li{margin-bottom:8px}
-
-    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
-    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
-
-    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
-    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
-
-    @media(max-width:1024px){
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .discipline{grid-template-columns:1fr}
+    .discipline li{
+      margin-bottom:8px;
     }
-    @media(max-width:640px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
-   <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <div class="nav-links">
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Engineering Services</h1>
-    <p>Integrated Mechanical, Electrical, Plumbing, Fire Protection and Fire Alarm engineering services delivering coordinated, permit-ready construction documents.</p>
+    <p>
+      Integrated Mechanical, Electrical, Plumbing, Fire Protection and Fire Alarm
+      engineering services delivering coordinated, permit-ready construction documents.
+    </p>
   </div>
 </section>
 
+<!-- DISCIPLINES -->
 <section>
   <div class="wrap">
     <h2 class="section-title">Our Engineering Disciplines</h2>
     <p class="section-sub">
-      Core MEP engineering services backed by code expertise, coordination experience, and construction-focused design.
+      Core MEP engineering services backed by code expertise, coordination experience,
+      and construction-focused design.
     </p>
 
-    <div class="grid">
-      <a class="card" href="mechanical.html">
-        <div class="icon">M</div>
+    <div class="services">
+      <a class="service-card" href="mechanical.html">
+        <div class="service-icon">M</div>
         <h3>Mechanical Engineering</h3>
         <p>HVAC system design, load calculations, equipment selection and energy compliance.</p>
       </a>
 
-      <a class="card" href="electrical.html">
-        <div class="icon">E</div>
+      <a class="service-card" href="electrical.html">
+        <div class="service-icon">E</div>
         <h3>Electrical Engineering</h3>
         <p>Power distribution, lighting systems, EV charging and NEC-compliant design.</p>
       </a>
 
-      <a class="card" href="plumbing.html">
-        <div class="icon">P</div>
+      <a class="service-card" href="plumbing.html">
+        <div class="service-icon">P</div>
         <h3>Plumbing Engineering</h3>
         <p>Domestic water, sanitary, storm drainage and gas piping systems.</p>
       </a>
 
-      <a class="card" href="fire.html">
-        <div class="icon">F</div>
+      <a class="service-card" href="fire.html">
+        <div class="service-icon">F</div>
         <h3>Fire Protection & Fire Alarm</h3>
         <p>Sprinkler layouts, hydraulic calculations and fire alarm system design.</p>
       </a>
@@ -134,9 +128,9 @@
   </div>
 </section>
 
+<!-- ON-DEMAND -->
 <section style="background:white">
   <div class="wrap">
-
     <div class="discipline">
       <div>
         <h2 class="section-title">Beyond Core Engineering</h2>
@@ -144,23 +138,26 @@
           Need fast-turn calculations, permit revisions, or drafting support?
           Explore our <strong>On-Demand Project Support</strong> services.
         </p>
+
         <ul>
           <li>Energy load calculation letters</li>
           <li>Title-24 & COMcheck compliance</li>
           <li>Permit resubmittals & AHJ responses</li>
           <li>MEP drafting & staff augmentation</li>
         </ul>
+
         <div style="margin-top:16px">
           <a class="nav-cta" href="on-demand.html">Explore On-Demand Support</a>
         </div>
       </div>
 
-      <img src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=900&q=80" alt="MEP coordination">
+      <img src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=900&q=80"
+           alt="MEP coordination">
     </div>
-
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Need Engineering Support for Your Project?</h2>
   <p>Share your scope and timeline — our team will respond within 24–48 hours.</p>
@@ -171,8 +168,15 @@
 
 <footer>
   <div class="footer-wrap">
-    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
-    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+    <div>
+      <strong>Horizon MEP</strong><br>
+      Professional MEP Engineering Services<br>
+      services@horizonmep.com
+    </div>
+    <div>
+      © 2026 Horizon MEP<br>
+      Serving clients across the United States
+    </div>
   </div>
 </footer>
 
