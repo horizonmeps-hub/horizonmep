@@ -3,111 +3,151 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Fire Protection & Fire Alarm Engineering | Horizon MEP</title>
-  <meta name="description" content="Fire protection and fire alarm engineering services including sprinkler design, hydraulic calculations, fire alarm layouts, and AHJ coordination." />
+
+  <title>Fire Protection & Fire Alarm Engineering Services | Horizon MEP</title>
+  <meta name="description" content="Fire protection and fire alarm engineering services including sprinkler layouts, hydraulic calculations, fire alarm design, NFPA compliance, and AHJ coordination across the U.S." />
 
   <meta name="theme-color" content="#3533cd" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/fire.html" />
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fire Protection & Fire Alarm Engineering Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com",
+      "logo": "https://www.horizonmep.com/logo.png"
+    },
+    "areaServed": "United States",
+    "serviceType": [
+      "Fire Sprinkler System Design",
+      "Hydraulic Calculations",
+      "Fire Alarm System Design",
+      "NFPA Compliance",
+      "AHJ Coordination"
+    ],
+    "url": "https://www.horizonmep.com/fire.html"
+  }
+  </script>
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-size:clamp(32px,4vw,44px);
+      margin-bottom:14px;
+    }
+    .page-hero p{
+      max-width:780px;
+      font-size:18px;
+      color:#e5e7eb;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
+    .content{
+      margin-top:56px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:48px;
+      align-items:start;
     }
-    img{max-width:100%;display:block;border-radius:16px}
-    a{text-decoration:none;color:inherit}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+    .highlights{
+      margin-top:64px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+    }
 
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
-    /* Hero */
-    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
-    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 14px}
-    .page-hero p{max-width:780px;color:#e5e7eb;font-size:18px}
-
-    /* Content */
-    .content{margin-top:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
-    .card{background:white;border-radius:18px;padding:28px 26px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
-    .card ul{margin:12px 0 0;padding-left:18px;color:#475569}
-    .card li{margin-bottom:8px}
-
-    /* Highlights */
-    .highlights{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    .highlight{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:18px;padding:24px;border:1px solid #eef2f7}
-
-    /* CTA */
-    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
-    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
-
-    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
-    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+    .highlight{
+      background:linear-gradient(180deg,#ffffff,#f9fbff);
+      border-radius:18px;
+      padding:24px;
+      border:1px solid #eef2f7;
+    }
 
     @media(max-width:1024px){
       .content{grid-template-columns:1fr}
       .highlights{grid-template-columns:repeat(2,1fr)}
     }
-    @media(max-width:640px){.highlights{grid-template-columns:1fr}}
+    @media(max-width:640px){
+      .highlights{grid-template-columns:1fr}
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Fire Protection & Fire Alarm Engineering</h1>
-    <p>Life-safety focused fire protection and fire alarm designs aligned with NFPA standards, local AHJ requirements, and real-world constructability.</p>
+    <p>
+      Life-safety focused fire protection and fire alarm designs aligned with
+      NFPA standards, AHJ requirements, and real-world construction conditions.
+    </p>
   </div>
 </section>
 
+<!-- CONTENT -->
 <section>
   <div class="wrap">
+
     <div class="content">
+
       <div class="card">
-        <h3>Fire Protection & Alarm Services</h3>
-        <p>We design integrated fire protection and fire alarm systems that prioritize occupant safety, clarity in documentation, and smooth permit approvals.</p>
+        <h2>Fire Protection & Alarm Services</h2>
+        <p class="muted">
+          We design integrated fire protection and fire alarm systems that
+          prioritize occupant safety, documentation clarity, and permit success.
+        </p>
+
         <ul>
           <li>Fire sprinkler system layout design</li>
           <li>Hydraulic calculations and system sizing</li>
           <li>Fire alarm device layouts and circuits</li>
-          <li>NFPA-compliant system design</li>
+          <li>NFPA-compliant life safety design</li>
           <li>AHJ coordination and permit support</li>
         </ul>
       </div>
@@ -116,33 +156,66 @@
         <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1200&q=80" alt="Fire protection engineering coordination">
         <h3 style="margin-top:18px">Typical Deliverables</h3>
         <ul>
-          <li>Sprinkler floor plans and riser diagrams</li>
+          <li>Sprinkler floor plans & riser diagrams</li>
           <li>Hydraulic calculation reports</li>
           <li>Fire alarm layout drawings</li>
           <li>Permit-ready life safety documentation</li>
         </ul>
       </div>
+
     </div>
 
     <div class="highlights">
-      <div class="highlight"><strong>NFPA Expertise</strong><br>Designs aligned with NFPA 13, 14, 20 and 72 standards.</div>
-      <div class="highlight"><strong>Life Safety Focus</strong><br>Systems engineered to protect occupants and property.</div>
-      <div class="highlight"><strong>Coordination-Ready</strong><br>Clear layouts coordinated with architectural and MEP systems.</div>
-      <div class="highlight"><strong>Permit Confidence</strong><br>Documentation designed to reduce RFIs and resubmittals.</div>
+      <div class="highlight"><strong>NFPA Expertise</strong><br>Design aligned with NFPA 13, 14, 20 & 72.</div>
+      <div class="highlight"><strong>Life Safety Focus</strong><br>Systems engineered to protect occupants and assets.</div>
+      <div class="highlight"><strong>Coordination-Ready</strong><br>Clear layouts coordinated with architectural & MEP systems.</div>
+      <div class="highlight"><strong>Permit Confidence</strong><br>Documentation built to reduce RFIs and resubmittals.</div>
     </div>
+
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Need Fire Protection or Fire Alarm Support?</h2>
-  <p>Share your project scope and jurisdiction — our team will respond within 24–48 hours.</p>
-  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request Fire Protection Proposal</a></div>
+  <p>Share your project scope and jurisdiction — we’ll respond within 24–48 hours.</p>
+  <div style="margin-top:28px">
+    <a class="btn-primary" href="request-quote.html">Request Fire Protection Proposal</a>
+  </div>
 </section>
 
 <footer>
   <div class="footer-wrap">
-    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
-    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+
+    <div>
+      <strong>Horizon MEP</strong><br>
+      Professional MEP Engineering Services<br>
+      services@horizonmep.com
+    </div>
+
+    <div>
+      <strong>Services</strong><br>
+      <a href="services.html">Engineering Services</a><br>
+      <a href="on-demand.html">On-Demand Project Support</a>
+    </div>
+
+    <div>
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
