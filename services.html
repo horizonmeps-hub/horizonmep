@@ -8,20 +8,45 @@
   <meta name="description" content="Mechanical, Electrical, Plumbing, Fire Protection & Fire Alarm engineering services delivering permit-ready, code-compliant MEP designs across the U.S." />
 
   <meta name="theme-color" content="#3533cd" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Base CSS (IMPORTANT: folder is CSS, not css) -->
+  <!-- Base CSS -->
   <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/services.html" />
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "MEP Engineering Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com",
+      "logo": "https://www.horizonmep.com/logo.png"
+    },
+    "areaServed": "United States",
+    "serviceType": [
+      "Mechanical Engineering",
+      "Electrical Engineering",
+      "Plumbing Engineering",
+      "Fire Protection Engineering",
+      "Fire Alarm Engineering"
+    ],
+    "url": "https://www.horizonmep.com/services.html"
+  }
+  </script>
 
   <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
-  <!-- Page-specific styles ONLY -->
+  <!-- Page-specific styles only -->
   <style>
-    /* Page Hero */
     .page-hero{
       background:var(--grad-main);
       color:white;
@@ -37,7 +62,6 @@
       color:#e5e7eb;
     }
 
-    /* Discipline section */
     .discipline{
       margin-top:72px;
       display:grid;
@@ -52,6 +76,10 @@
     }
     .discipline li{
       margin-bottom:8px;
+    }
+
+    @media(max-width:1024px){
+      .discipline{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -91,7 +119,7 @@
   </div>
 </section>
 
-<!-- DISCIPLINES -->
+<!-- ENGINEERING DISCIPLINES -->
 <section>
   <div class="wrap">
     <h2 class="section-title">Our Engineering Disciplines</h2>
@@ -128,31 +156,32 @@
   </div>
 </section>
 
-<!-- ON-DEMAND -->
+<!-- ON-DEMAND SUPPORT -->
 <section style="background:white">
   <div class="wrap">
     <div class="discipline">
       <div>
-        <h2 class="section-title">Beyond Core Engineering</h2>
+        <h2 class="section-title">On-Demand Project Support</h2>
         <p class="section-sub">
-          Need fast-turn calculations, permit revisions, or drafting support?
-          Explore our <strong>On-Demand Project Support</strong> services.
+          Fast-response engineering and production support to help project teams
+          meet deadlines and respond to AHJ comments.
         </p>
 
         <ul>
           <li>Energy load calculation letters</li>
-          <li>Title-24 & COMcheck compliance</li>
+          <li>Title-24 & COMcheck compliance documentation</li>
           <li>Permit resubmittals & AHJ responses</li>
           <li>MEP drafting & staff augmentation</li>
         </ul>
 
-        <div style="margin-top:16px">
-          <a class="nav-cta" href="on-demand.html">Explore On-Demand Support</a>
+        <div style="margin-top:18px">
+          <a class="btn-primary" href="on-demand.html">Explore On-Demand Support</a>
         </div>
       </div>
 
-      <img src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=900&q=80"
-           alt="MEP coordination">
+      <img
+        src="https://images.unsplash.com/photo-1581091870622-1e7e8d4f8c0d?auto=format&fit=crop&w=900&q=80"
+        alt="MEP coordination and engineering review">
     </div>
   </div>
 </section>
@@ -162,21 +191,42 @@
   <h2>Need Engineering Support for Your Project?</h2>
   <p>Share your scope and timeline — our team will respond within 24–48 hours.</p>
   <div style="margin-top:28px">
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    <a class="btn-primary" href="request-quote.html">Request a Quote</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-wrap">
+
     <div>
       <strong>Horizon MEP</strong><br>
       Professional MEP Engineering Services<br>
       services@horizonmep.com
     </div>
+
     <div>
-      © 2026 Horizon MEP<br>
-      Serving clients across the United States
+      <strong>Services</strong><br>
+      <a href="services.html">Engineering Services</a><br>
+      <a href="on-demand.html">On-Demand Project Support</a>
     </div>
+
+    <div>
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
