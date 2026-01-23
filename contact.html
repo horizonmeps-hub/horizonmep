@@ -3,61 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Contact | Horizon MEP</title>
   <meta name="description" content="Contact Horizon MEP for MEP engineering inquiries, proposals, and permit-ready design support across the United States." />
 
   <meta name="theme-color" content="#3533cd" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
-
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
-    /* Hero */
     .page-hero{
       background:var(--grad-main);
       color:white;
       padding:96px 20px 72px;
     }
     .page-hero h1{
-      font-family:Poppins,sans-serif;
       font-size:clamp(32px,4vw,44px);
-      margin:0 0 16px;
+      margin-bottom:16px;
     }
     .page-hero p{
       max-width:760px;
-      color:#e5e7eb;
       font-size:18px;
+      color:#e5e7eb;
     }
 
-    /* Content */
-    .grid{
+    .contact-grid{
       display:grid;
       grid-template-columns:1.2fr .8fr;
       gap:48px;
@@ -71,9 +50,9 @@
       box-shadow:0 12px 36px rgba(15,23,42,0.08);
     }
 
-    .muted{color:#475569}
+    .muted{ color:#475569; }
 
-    .contact-list p{margin:0 0 12px}
+    .contact-list p{ margin:0 0 14px; }
 
     .btn{
       display:inline-block;
@@ -84,7 +63,16 @@
       font-weight:600;
     }
 
-    /* Map */
+    .btn-secondary{
+      display:inline-block;
+      padding:12px 16px;
+      border-radius:10px;
+      border:1.5px solid var(--gray);
+      color:#0b1a2b;
+      font-weight:600;
+      margin-top:12px;
+    }
+
     .map{
       margin-top:32px;
       height:260px;
@@ -95,97 +83,106 @@
       justify-content:center;
       color:#475569;
       font-size:14px;
-    }
-
-    footer{
-      background:#020617;
-      color:#cbd5f5;
-      padding:36px 20px;
-    }
-    .footer-wrap{
-      max-width:1200px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:24px;
+      text-align:center;
     }
 
     @media(max-width:1024px){
-      .grid{grid-template-columns:1fr}
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
-     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <div class="nav-links">
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Contact Horizon MEP</h1>
     <p>
-      Have a project inquiry, need engineering support, or want to request a proposal?
-      Reach out — our team responds within 24–48 hours.
+      Have a project inquiry, need engineering support, or want to explore
+      collaboration opportunities? Our team typically responds within 24–48 hours.
     </p>
   </div>
 </section>
 
+<!-- CONTENT -->
 <section>
-  <div class="wrap grid">
+  <div class="wrap contact-grid">
 
+    <!-- CONTACT INFO -->
     <div class="card">
-      <h2 style="font-family:Poppins,sans-serif;margin-top:0">Get in Touch</h2>
+      <h2>Get in Touch</h2>
       <p class="muted">
-        For general inquiries, engineering support, or collaboration opportunities,
-        contact us using the details below.
+        For engineering services, proposals, or general questions,
+        reach out using the information below.
       </p>
 
       <div class="contact-list">
-        <p><strong>Email</strong><br>
+        <p>
+          <strong>Email</strong><br>
           <a href="mailto:services@horizonmep.com">services@horizonmep.com</a>
         </p>
 
-        <p><strong>Service Area</strong><br>
+        <p>
+          <strong>Service Area</strong><br>
           United States (Remote Project Support)
         </p>
 
-        <p><strong>Response Time</strong><br>
+        <p>
+          <strong>Response Time</strong><br>
           Typically within 1 business day
         </p>
       </div>
     </div>
 
+    <!-- CTA CARD -->
     <aside class="card">
-      <h3 style="margin-top:0">Request a Proposal</h3>
+      <h3>Request a Proposal</h3>
       <p class="muted">
-        Upload drawings, scopes, or RFPs and receive a proposal within 24–48 hours.
+        Upload drawings, scopes, or RFPs and receive a detailed proposal
+        within 24–48 hours.
       </p>
+
       <a class="btn" href="request-quote.html">Request a Quote</a>
 
-      <hr style="margin:20px 0;border:none;border-top:1px solid #e5e7eb">
+      <hr style="margin:24px 0;border:none;border-top:1px solid #e5e7eb">
 
+      <h4>Interested in Careers?</h4>
       <p class="muted" style="font-size:14px">
-        Typical projects include franchise, multi-family, commercial, tenant improvements,
-        and mixed-use developments.
+        Looking to join an engineering-focused team working on U.S. projects?
       </p>
+
+      <a class="btn-secondary" href="careers.html">View Careers</a>
     </aside>
 
   </div>
 
+  <!-- MAP -->
   <div class="wrap">
     <div class="map">
       Map placeholder — add Google Maps embed if needed
@@ -195,15 +192,32 @@
 
 <footer>
   <div class="footer-wrap">
+
     <div>
       <strong>Horizon MEP</strong><br>
       Professional MEP Engineering Services<br>
       services@horizonmep.com
     </div>
+
     <div>
-      © 2026 Horizon MEP<br>
-      Serving clients across the United States
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="careers.html">Careers</a><br>
+      <a href="contact.html">Contact</a>
     </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a><br>
+      <a href="accessibility.html">Accessibility</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
