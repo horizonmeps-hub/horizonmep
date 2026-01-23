@@ -3,129 +3,181 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Electrical Engineering | Horizon MEP</title>
-  <meta name="description" content="Electrical engineering services including power distribution, lighting design, EV charging, load calculations and permit-ready electrical documentation." />
+
+  <title>Electrical Engineering Services | Horizon MEP</title>
+  <meta name="description" content="Electrical engineering services including power distribution, lighting design, EV charging, load calculations, and permit-ready electrical documentation across the U.S." />
 
   <meta name="theme-color" content="#3533cd" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/electrical.html" />
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Electrical Engineering Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com",
+      "logo": "https://www.horizonmep.com/logo.png"
+    },
+    "areaServed": "United States",
+    "serviceType": [
+      "Power Distribution Design",
+      "Lighting Design",
+      "EV Charging Infrastructure",
+      "Electrical Load Calculations",
+      "Permit-Ready Electrical Drawings"
+    ],
+    "url": "https://www.horizonmep.com/electrical.html"
+  }
+  </script>
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-size:clamp(32px,4vw,44px);
+      margin-bottom:14px;
+    }
+    .page-hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#e5e7eb;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
+    .content{
+      margin-top:56px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:48px;
+      align-items:start;
     }
-    img{max-width:100%;display:block;border-radius:16px}
-    a{text-decoration:none;color:inherit}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:24px;
+    }
 
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
+    .stat{
+      background:linear-gradient(180deg,#ffffff,#f9fbff);
+      border-radius:14px;
+      padding:18px;
+      text-align:center;
+      border:1px solid #eef2f7;
+    }
+    .stat strong{
+      display:block;
+      font-size:22px;
+      color:var(--blue);
+    }
 
-    /* Hero */
-    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
-    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 14px}
-    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
+    .highlights{
+      margin-top:64px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+    }
 
-    /* Content */
-    .content{margin-top:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
-    .card{background:white;border-radius:18px;padding:28px 26px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
-    .card ul{margin:12px 0 0;padding-left:18px;color:#475569}
-    .card li{margin-bottom:8px}
-
-    /* Stats / visual */
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px}
-    .stat{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:14px;padding:18px;text-align:center;border:1px solid #eef2f7}
-    .stat strong{display:block;font-size:22px;color:var(--blue)}
-
-    /* Highlights */
-    .highlights{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    .highlight{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:18px;padding:24px;border:1px solid #eef2f7}
-
-    /* CTA */
-    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
-    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
-
-    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
-    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+    .highlight{
+      background:linear-gradient(180deg,#ffffff,#f9fbff);
+      border-radius:18px;
+      padding:24px;
+      border:1px solid #eef2f7;
+    }
 
     @media(max-width:1024px){
       .content{grid-template-columns:1fr}
-      .highlights{grid-template-columns:repeat(2,1fr)}
       .stats{grid-template-columns:repeat(2,1fr)}
+      .highlights{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:640px){
-      .highlights{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr}
+      .stats,.highlights{grid-template-columns:1fr}
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
-    <h1>Electrical Engineering</h1>
-    <p>Reliable, code-compliant electrical system designs supporting power distribution, lighting, life safety and EV infrastructure across diverse building types.</p>
+    <h1>Electrical Engineering Services</h1>
+    <p>
+      Code-compliant electrical designs supporting safe power distribution,
+      efficient lighting, life-safety systems, and scalable EV infrastructure.
+    </p>
   </div>
 </section>
 
+<!-- CONTENT -->
 <section>
   <div class="wrap">
+
     <div class="content">
+
       <div class="card">
-        <h3>Electrical Engineering Services</h3>
-        <p>Our electrical designs balance safety, performance and constructability while meeting NEC and local jurisdiction requirements.</p>
+        <h2>Our Electrical Engineering Expertise</h2>
+        <p class="muted">
+          We deliver practical, permit-ready electrical designs aligned with NEC,
+          local amendments, and real-world construction needs.
+        </p>
+
         <ul>
-          <li>Electrical load calculations and demand analysis</li>
-          <li>Power distribution and panel schedules</li>
-          <li>Interior and exterior lighting design</li>
-          <li>Lighting controls and energy code compliance</li>
+          <li>Electrical load calculations & demand analysis</li>
+          <li>Power distribution & panel schedules</li>
+          <li>Interior & exterior lighting design</li>
+          <li>Lighting controls & energy compliance</li>
           <li>EV charging infrastructure planning</li>
-          <li>Single-line diagrams and riser layouts</li>
+          <li>Single-line diagrams & risers</li>
         </ul>
 
         <div class="stats">
-          <div class="stat"><strong>NEC</strong>Code compliant</div>
-          <div class="stat"><strong>EV</strong>Ready design</div>
+          <div class="stat"><strong>NEC</strong>Code-first design</div>
+          <div class="stat"><strong>EV</strong>Future-ready</div>
           <div class="stat"><strong>Energy</strong>Efficient lighting</div>
-          <div class="stat"><strong>Permit</strong>Ready sets</div>
+          <div class="stat"><strong>Permit</strong>Ready drawings</div>
         </div>
       </div>
 
@@ -133,33 +185,66 @@
         <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80" alt="Electrical engineering design workspace">
         <h3 style="margin-top:18px">Typical Deliverables</h3>
         <ul>
-          <li>Electrical floor plans and layouts</li>
-          <li>Panel schedules and load summaries</li>
+          <li>Electrical floor plans</li>
+          <li>Panel schedules & load summaries</li>
           <li>Lighting fixture schedules</li>
-          <li>Permit-ready electrical drawings</li>
+          <li>Permit-ready electrical sets</li>
         </ul>
       </div>
+
     </div>
 
     <div class="highlights">
       <div class="highlight"><strong>Power Reliability</strong><br>Systems designed for long-term operational stability.</div>
-      <div class="highlight"><strong>Lighting Quality</strong><br>Balanced illumination for comfort, safety and efficiency.</div>
-      <div class="highlight"><strong>EV Integration</strong><br>Scalable EV charging solutions for future growth.</div>
-      <div class="highlight"><strong>AHJ Coordination</strong><br>Clear documentation supporting smooth approvals.</div>
+      <div class="highlight"><strong>Lighting Quality</strong><br>Balanced illumination for safety and comfort.</div>
+      <div class="highlight"><strong>EV Integration</strong><br>Scalable EV charging strategies.</div>
+      <div class="highlight"><strong>AHJ Support</strong><br>Clear documentation for smooth approvals.</div>
     </div>
+
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Need Electrical Engineering Support?</h2>
-  <p>Share your project scope and timeline — our team will respond within 24–48 hours.</p>
-  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request Electrical Proposal</a></div>
+  <p>Share your drawings and scope — we’ll respond within 24–48 hours.</p>
+  <div style="margin-top:28px">
+    <a class="btn-primary" href="request-quote.html">Request Electrical Proposal</a>
+  </div>
 </section>
 
 <footer>
   <div class="footer-wrap">
-    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
-    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+
+    <div>
+      <strong>Horizon MEP</strong><br>
+      Professional MEP Engineering Services<br>
+      services@horizonmep.com
+    </div>
+
+    <div>
+      <strong>Services</strong><br>
+      <a href="services.html">Engineering Services</a><br>
+      <a href="on-demand.html">On-Demand Project Support</a>
+    </div>
+
+    <div>
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
