@@ -3,113 +3,154 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Mechanical Engineering | Horizon MEP</title>
-  <meta name="description" content="Mechanical engineering services including HVAC system design, Trace 3D and HAP load calculations, equipment selection, and Title-24 compliance." />
+
+  <title>Mechanical Engineering & HVAC Design Services | Horizon MEP</title>
+  <meta name="description" content="Mechanical engineering and HVAC design services including Trace 3D & HAP load calculations, system design, equipment selection, and Title-24 compliance across the U.S." />
 
   <meta name="theme-color" content="#3533cd" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/mechanical.html" />
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mechanical Engineering & HVAC Design Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com",
+      "logo": "https://www.horizonmep.com/logo.png"
+    },
+    "areaServed": "United States",
+    "serviceType": [
+      "HVAC System Design",
+      "Trace 3D Load Calculations",
+      "HAP Load Calculations",
+      "Equipment Selection",
+      "Title-24 Compliance",
+      "Mechanical COMcheck"
+    ],
+    "url": "https://www.horizonmep.com/mechanical.html"
+  }
+  </script>
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-size:clamp(32px,4vw,44px);
+      margin-bottom:14px;
+    }
+    .page-hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#e5e7eb;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
+    .content{
+      margin-top:56px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:48px;
+      align-items:start;
     }
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
+    .highlights{
+      margin-top:64px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+    }
 
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
-    /* Hero */
-    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
-    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 14px}
-    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
-
-    /* Content blocks */
-    .content{margin-top:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
-    .card{background:white;border-radius:18px;padding:28px 26px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
-    .card h3{margin-top:0}
-    .card ul{margin:12px 0 0;padding-left:18px;color:#475569}
-    .card li{margin-bottom:8px}
-
-    /* Highlights */
-    .highlights{margin-top:64px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-    .highlight{background:linear-gradient(180deg,#ffffff,#f9fbff);border-radius:18px;padding:24px;border:1px solid #eef2f7}
-
-    /* CTA */
-    .cta{background:var(--grad-accent);color:white;text-align:center;padding:84px 20px}
-    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
-
-    footer{background:#020617;color:#cbd5f5;padding:36px 20px}
-    .footer-wrap{max-width:1200px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+    .highlight{
+      background:linear-gradient(180deg,#ffffff,#f9fbff);
+      border-radius:18px;
+      padding:24px;
+      border:1px solid #eef2f7;
+    }
 
     @media(max-width:1024px){
       .content{grid-template-columns:1fr}
       .highlights{grid-template-columns:repeat(2,1fr)}
     }
-    @media(max-width:640px){.highlights{grid-template-columns:1fr}}
+    @media(max-width:640px){
+      .highlights{grid-template-columns:1fr}
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Mechanical Engineering & HVAC Design</h1>
-    <p>Construction-ready mechanical designs focused on occupant comfort, energy efficiency, and code compliance across commercial and residential projects.</p>
+    <p>
+      Construction-ready mechanical and HVAC designs focused on occupant comfort,
+      energy efficiency, and jurisdictional code compliance.
+    </p>
   </div>
 </section>
 
+<!-- CONTENT -->
 <section>
   <div class="wrap">
+
     <div class="content">
+
       <div class="card">
-        <h3>Mechanical Engineering Services</h3>
-        <p>We deliver coordinated HVAC designs that integrate seamlessly with architectural and structural systems while meeting jurisdictional requirements.</p>
+        <h2>Mechanical Engineering Services</h2>
+        <p class="muted">
+          Our mechanical designs are engineered to integrate cleanly with
+          architectural and structural systems while supporting smooth permitting
+          and construction.
+        </p>
+
         <ul>
-          <li>HVAC load calculations (Trace 3D, HAP)</li>
-          <li>System design for commercial, residential and mixed-use buildings</li>
+          <li>HVAC load calculations (Trace 3D & HAP)</li>
+          <li>Commercial, residential & mixed-use HVAC system design</li>
           <li>Equipment sizing and selection</li>
-          <li>Mechanical layouts, details and schedules</li>
-          <li>Title-24 (California) compliance documentation</li>
+          <li>Mechanical layouts, details & schedules</li>
+          <li>Title-24 (California) energy compliance</li>
           <li>Mechanical COMcheck & Envelope COMcheck</li>
         </ul>
       </div>
@@ -117,33 +158,66 @@
       <div class="card">
         <h3>Typical Deliverables</h3>
         <ul>
-          <li>Heating and cooling load calculation reports</li>
-          <li>HVAC floor plans and riser diagrams</li>
-          <li>Equipment schedules and control diagrams</li>
+          <li>Heating & cooling load calculation reports</li>
+          <li>HVAC floor plans & riser diagrams</li>
+          <li>Equipment schedules & control diagrams</li>
           <li>Permit-ready mechanical drawing sets</li>
         </ul>
       </div>
+
     </div>
 
     <div class="highlights">
-      <div class="highlight"><strong>Energy-Driven Design</strong><br>Efficient systems optimized for performance and compliance.</div>
-      <div class="highlight"><strong>Revit & CAD Coordination</strong><br>Integrated coordination with architectural and structural models.</div>
-      <div class="highlight"><strong>Code Expertise</strong><br>Deep familiarity with IMC, ASHRAE and Title-24 requirements.</div>
-      <div class="highlight"><strong>Permit Support</strong><br>Clear, review-ready documents and AHJ coordination.</div>
+      <div class="highlight"><strong>Energy-Driven Design</strong><br>Systems optimized for efficiency and performance.</div>
+      <div class="highlight"><strong>Revit & CAD Coordination</strong><br>Integrated coordination with all building disciplines.</div>
+      <div class="highlight"><strong>Code Expertise</strong><br>IMC, ASHRAE, and Title-24 familiarity.</div>
+      <div class="highlight"><strong>Permit Support</strong><br>Clear documentation aligned with AHJ expectations.</div>
     </div>
+
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Need Mechanical Engineering Support?</h2>
-  <p>Share your project details and timeline — our team will respond within 24–48 hours.</p>
-  <div style="margin-top:28px"><a class="nav-cta" href="request-quote.html">Request Mechanical Proposal</a></div>
+  <p>Share your project scope and timeline — we’ll respond within 24–48 hours.</p>
+  <div style="margin-top:28px">
+    <a class="btn-primary" href="request-quote.html">Request Mechanical Proposal</a>
+  </div>
 </section>
 
 <footer>
   <div class="footer-wrap">
-    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
-    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+
+    <div>
+      <strong>Horizon MEP</strong><br>
+      Professional MEP Engineering Services<br>
+      services@horizonmep.com
+    </div>
+
+    <div>
+      <strong>Services</strong><br>
+      <a href="services.html">Engineering Services</a><br>
+      <a href="on-demand.html">On-Demand Project Support</a>
+    </div>
+
+    <div>
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
