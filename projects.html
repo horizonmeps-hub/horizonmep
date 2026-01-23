@@ -3,62 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Projects | Horizon MEP</title>
+
+  <title>Projects & Case Studies | Horizon MEP</title>
   <meta name="description" content="Selected MEP engineering projects demonstrating permit-ready design, coordination, and problem-solving across U.S. jurisdictions." />
 
   <meta name="theme-color" content="#3533cd" />
-  <meta name="mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/projects.html" />
+
+  <!-- Case Study Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "MEP Engineering Projects",
+    "url": "https://www.horizonmep.com/projects.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com"
+    }
+  }
+  </script>
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-size:clamp(32px,4vw,44px);
+      margin-bottom:16px;
+    }
+    .page-hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#e5e7eb;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-    }
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
-
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
-    /* Hero */
-    .page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
-    .page-hero h1{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,44px);margin:0 0 16px}
-    .page-hero p{max-width:760px;color:#e5e7eb;font-size:18px}
-
-    /* Project Card */
     .project{
       background:white;
       border-radius:18px;
       padding:32px;
       box-shadow:0 12px 36px rgba(15,23,42,0.08);
-      margin-bottom:48px;
+      margin-bottom:56px;
     }
 
     .project-head{
       display:grid;
       grid-template-columns:1.2fr .8fr;
       gap:32px;
-      align-items:start;
     }
 
     .badge{
@@ -73,27 +79,25 @@
     }
 
     .project h2{
-      font-family:Poppins,sans-serif;
-      margin:6px 0 8px;
+      margin:8px 0 8px;
     }
 
-    .meta{color:#475569;font-size:14px}
-
-    .problem-solution{
-      margin-top:18px;
+    .meta{
+      color:#475569;
+      font-size:14px;
+      margin-bottom:12px;
     }
 
     .problem-solution strong{
       display:block;
-      margin-top:12px;
+      margin-top:14px;
     }
 
-    /* PDF grid */
     .pdf-grid{
-      margin-top:24px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:18px;
+      margin-top:12px;
     }
 
     .pdf{
@@ -111,33 +115,10 @@
 
     .pdf-label{
       padding:10px;
+      text-align:center;
       font-size:14px;
       font-weight:600;
-      text-align:center;
       background:white;
-    }
-
-    /* CTA */
-    .cta{
-      background:var(--grad-accent);
-      color:white;
-      text-align:center;
-      padding:84px 20px;
-    }
-    .cta h2{font-family:Poppins,sans-serif;font-size:clamp(28px,4vw,36px)}
-
-    footer{
-      background:#020617;
-      color:#cbd5f5;
-      padding:36px 20px;
-    }
-    .footer-wrap{
-      max-width:1200px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:24px;
     }
 
     @media(max-width:1024px){
@@ -146,31 +127,43 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Selected Projects</h1>
-    <p>Representative MEP engineering work demonstrating coordinated design, permit readiness, and practical problem-solving.</p>
+    <p>
+      Representative MEP engineering work highlighting coordinated design,
+      permitting expertise, and real-world problem solving.
+    </p>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section>
   <div class="wrap">
 
@@ -180,17 +173,26 @@
         <div>
           <span class="badge">Multi-Family Residential • California</span>
           <h2>Permit-Ready MEP Design for Multi-Family Housing</h2>
-          <p class="meta">Mechanical • Electrical • Plumbing</p>
+          <div class="meta">Mechanical • Electrical • Plumbing</div>
 
           <div class="problem-solution">
             <strong>Challenge</strong>
-            <p>The project required fast-turn, coordinated MEP drawings while meeting California Title-24 energy requirements and local AHJ expectations.</p>
+            <p>
+              Fast-track permitting with strict Title-24 energy requirements
+              and AHJ coordination across multiple disciplines.
+            </p>
 
             <strong>Our Solution</strong>
-            <p>Horizon MEP delivered coordinated HVAC, electrical, and plumbing designs with energy compliance documentation, resolving review comments and supporting permit approval.</p>
+            <p>
+              Delivered coordinated HVAC, electrical, and plumbing systems,
+              complete with energy compliance documentation and review responses.
+            </p>
 
             <strong>Outcome</strong>
-            <p>Permit-ready construction documents approved with minimal revisions, enabling the project team to maintain schedule.</p>
+            <p>
+              Permit-ready documents approved with minimal revisions,
+              allowing the project to stay on schedule.
+            </p>
           </div>
         </div>
 
@@ -215,14 +217,20 @@
     <div class="project">
       <span class="badge">Tenant Improvement • New York</span>
       <h2>Tenant Improvement Electrical Upgrade</h2>
-      <p class="meta">Electrical Engineering</p>
+      <div class="meta">Electrical Engineering</div>
 
       <div class="problem-solution">
         <strong>Challenge</strong>
-        <p>Existing electrical infrastructure required upgrades to support new tenant loads while maintaining code compliance.</p>
+        <p>
+          Existing electrical systems required upgrades to support new tenant
+          loads while maintaining NEC compliance.
+        </p>
 
         <strong>Our Solution</strong>
-        <p>We redesigned the electrical distribution, updated panel schedules, and coordinated with architectural plans for permit submission.</p>
+        <p>
+          Redesigned electrical distribution, updated panel schedules,
+          and coordinated with architectural layouts for permit submission.
+        </p>
       </div>
 
       <div class="pdf-grid">
@@ -236,18 +244,47 @@
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Looking for Similar Project Support?</h2>
-  <p>Share your drawings and scope — our team will respond within 24–48 hours.</p>
+  <p>Share your drawings and scope — we’ll respond within 24–48 hours.</p>
   <div style="margin-top:28px">
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+    <a class="btn-primary" href="request-quote.html">Request a Quote</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-wrap">
-    <div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br>services@horizonmep.com</div>
-    <div>© 2026 Horizon MEP<br>Serving clients across the United States</div>
+
+    <div>
+      <strong>Horizon MEP</strong><br>
+      Professional MEP Engineering Services<br>
+      services@horizonmep.com
+    </div>
+
+    <div>
+      <strong>Services</strong><br>
+      <a href="services.html">Engineering Services</a><br>
+      <a href="on-demand.html">On-Demand Project Support</a>
+    </div>
+
+    <div>
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
