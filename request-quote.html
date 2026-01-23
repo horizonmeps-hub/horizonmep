@@ -3,56 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Request a Quote | Horizon MEP</title>
   <meta name="description" content="Request a proposal for Mechanical, Electrical, Plumbing, and Fire Protection engineering services. Horizon MEP responds within 24–48 hours." />
 
   <meta name="theme-color" content="#3533cd" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/request-quote.html" />
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Request a Quote – Horizon MEP",
+    "url": "https://www.horizonmep.com/request-quote.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "services@horizonmep.com"
+    }
+  }
+  </script>
+
+  <!-- GitHub Pages Base -->
   <base href="/horizonmep/">
 
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
-
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
     .page-hero{
       background:var(--grad-main);
       color:white;
       padding:96px 20px 72px;
     }
     .page-hero h1{
-      font-family:Poppins,sans-serif;
       font-size:clamp(32px,4vw,44px);
-      margin:0 0 16px;
+      margin-bottom:16px;
     }
     .page-hero p{
       max-width:780px;
-      color:#e5e7eb;
       font-size:18px;
+      color:#e5e7eb;
     }
 
     .grid{
@@ -71,9 +74,6 @@
 
     .muted{color:#475569}
 
-    .steps{
-      margin-top:16px;
-    }
     .steps li{margin-bottom:8px}
 
     iframe{
@@ -83,61 +83,58 @@
       border-radius:12px;
     }
 
-    footer{
-      background:#020617;
-      color:#cbd5f5;
-      padding:36px 20px;
-    }
-    .footer-wrap{
-      max-width:1200px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:24px;
-    }
-
     @media(max-width:1024px){
       .grid{grid-template-columns:1fr}
       iframe{height:820px}
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Request a Proposal</h1>
     <p>
-      Share your project details and drawings. Our engineering team will review
-      and respond with a proposal within 24–48 hours.
+      Share your project details and drawings. Our engineering team reviews every
+      request and responds within 24–48 hours.
     </p>
   </div>
 </section>
 
+<!-- CONTENT -->
 <section>
   <div class="wrap grid">
 
+    <!-- LEFT -->
     <div class="card">
-      <h2 style="font-family:Poppins,sans-serif;margin-top:0">What Happens Next</h2>
+      <h2 class="section-title">What Happens Next</h2>
       <p class="muted">
-        We review every request internally — no automated pricing, no sales scripts.
+        Every request is reviewed by our engineering team — no automated pricing,
+        no sales scripts.
       </p>
 
       <ul class="steps muted">
@@ -149,17 +146,19 @@
 
       <p class="muted" style="margin-top:16px">
         Typical projects include multi-family, commercial, tenant improvements,
-        and mixed-use developments across the U.S.
+        and mixed-use developments across the United States.
       </p>
     </div>
 
+    <!-- RIGHT -->
     <div class="card">
-      <h2 style="font-family:Poppins,sans-serif;margin-top:0">Submit Project Details</h2>
+      <h2 class="section-title">Submit Project Details</h2>
 
-      <!-- Replace iframe src with your chosen modern form provider -->
+      <!-- Tally Form -->
       <iframe
         src="https://tally.so/r/jaoVGJ"
-        title="Request a Quote Form">
+        title="Request a Quote Form"
+        loading="lazy">
       </iframe>
 
       <p class="muted" style="font-size:14px;margin-top:12px">
@@ -173,15 +172,36 @@
 
 <footer>
   <div class="footer-wrap">
+
     <div>
       <strong>Horizon MEP</strong><br>
       Professional MEP Engineering Services<br>
       services@horizonmep.com
     </div>
+
     <div>
-      © 2026 Horizon MEP<br>
-      Serving clients across the United States
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="contact.html">Contact</a>
     </div>
+
+    <div>
+      <strong>Services</strong><br>
+      <a href="services.html">Engineering Services</a><br>
+      <a href="on-demand.html">On-Demand Project Support</a>
+    </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
