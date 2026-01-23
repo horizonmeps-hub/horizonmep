@@ -2,50 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>What Makes an MEP Drawing Permit-Ready? | Horizon MEP</title>
   <meta name="description" content="Learn what makes an MEP drawing permit-ready, common reasons for AHJ rejections, and how coordinated MEP design accelerates approvals." />
+  <link rel="canonical" href="https://www.horizonmep.com/blog/permit-ready-mep-drawings.html" />
 
-  <!-- SEO Schema -->
+  <!-- SEO: Article Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.horizonmep.com/blog/permit-ready-mep-drawings.html"
+    },
     "headline": "What Makes an MEP Drawing Permit-Ready?",
     "description": "Common reasons MEP drawings are rejected by AHJs and how permit-ready design accelerates approvals.",
     "author": {
       "@type": "Organization",
-      "name": "Horizon MEP"
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Horizon MEP",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://horizonmeps-hub.github.io/horizonmep/logo.png"
+        "url": "https://www.horizonmep.com/logo.png"
       }
-    }
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01"
   }
   </script>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Base Path -->
   <base href="/horizonmep/">
 
   <style>
-    body{margin:0;font-family:Inter;background:#f6f8fc;color:#0b1a2b;line-height:1.75}
-    a{color:#3533cd;font-weight:500;text-decoration:none}
-    header,footer{background:#020617;color:#cbd5f5}
-    .wrap{max-width:820px;margin:auto;padding:64px 20px}
-    h1,h2{font-family:Poppins,sans-serif}
-    .meta{color:#475569;font-size:14px;margin-bottom:24px}
-    .callout{background:#eef2ff;border-left:4px solid #3533cd;padding:16px;margin:32px 0;border-radius:8px}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+      background:#f6f8fc;
+      color:#0b1a2b;
+      line-height:1.75;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      color:#3533cd;
+      font-weight:500;
+      text-decoration:none;
+    }
+    a:hover{text-decoration:underline}
+
+    header, footer{
+      background:#020617;
+      color:#cbd5f5;
+    }
+
+    .wrap{
+      max-width:820px;
+      margin:auto;
+      padding:64px 20px;
+    }
+
+    header .wrap{
+      padding:24px 20px;
+    }
+
+    h1, h2{
+      font-family:Poppins,sans-serif;
+      line-height:1.25;
+    }
+
+    h1{
+      font-size:clamp(30px,4vw,40px);
+      margin-bottom:12px;
+    }
+
+    h2{
+      margin-top:40px;
+    }
+
+    .meta{
+      color:#475569;
+      font-size:14px;
+      margin-bottom:28px;
+    }
+
+    .callout{
+      background:#eef2ff;
+      border-left:4px solid #3533cd;
+      padding:18px 20px;
+      margin:36px 0;
+      border-radius:10px;
+      font-size:15px;
+    }
+
+    footer .wrap{
+      padding:32px 20px;
+      font-size:14px;
+    }
+
+    @media(max-width:640px){
+      .wrap{padding:48px 16px}
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="wrap" style="padding:24px 20px">
+  <div class="wrap">
     <a href="/horizonmep/" style="color:white;font-weight:700">Horizon MEP</a>
   </div>
 </header>
@@ -53,7 +126,7 @@
 <main class="wrap">
 
   <h1>What Makes an MEP Drawing Permit-Ready?</h1>
-  <div class="meta">By Horizon MEP • Engineering Insights</div>
+  <div class="meta">Engineering Insights • Permitting & Compliance</div>
 
   <p>
     Permit delays are one of the most common reasons construction schedules slip.
@@ -62,7 +135,7 @@
   </p>
 
   <p>
-    So what does “permit-ready” really mean from an Authority Having Jurisdiction (AHJ)
+    So what does “permit-ready” actually mean from an Authority Having Jurisdiction (AHJ)
     perspective?
   </p>
 
@@ -75,15 +148,16 @@
 
   <h2>2. Load Calculations Are Included and Consistent</h2>
   <p>
-    HVAC, electrical, and plumbing loads must align with equipment selections and
-    schedules. Inconsistent loads between sheets are a red flag for reviewers.
+    HVAC, electrical, and plumbing load calculations must align with equipment
+    selections and schedules. Inconsistent values across drawings raise red flags
+    during plan review.
   </p>
 
   <h2>3. Systems Are Coordinated Across Disciplines</h2>
   <p>
     Permit reviewers routinely flag conflicts between mechanical, electrical,
-    plumbing, and fire protection systems. Coordinated drawings reduce RFIs
-    and demonstrate engineering diligence.
+    plumbing, and fire protection systems. Coordinated drawings demonstrate
+    engineering diligence and reduce RFIs during construction.
   </p>
 
   <h2>4. Life Safety Systems Are Fully Addressed</h2>
@@ -94,7 +168,7 @@
   </p>
 
   <div class="callout">
-    <strong>Engineering Tip:</strong><br>
+    <strong>Engineering Insight</strong><br>
     Permit-ready drawings are not “minimum sets.” They are coordinated, reviewed,
     and structured to answer AHJ questions before they’re asked.
   </div>
@@ -102,21 +176,23 @@
   <h2>How Horizon MEP Supports Permit Approval</h2>
   <p>
     Horizon MEP prepares construction-ready MEP drawings with permitting in mind —
-    from early code review through AHJ coordination and revisions.
+    from early code review through AHJ coordination and fast-turn revisions.
   </p>
 
   <p>
     Learn more about our
-    <a href="services.html">Engineering Services</a> or explore
+    <a href="services.html">Engineering Services</a>
+    or explore
     <a href="on-demand.html">On-Demand Project Support</a>
-    for permit revisions and fast-turn calculations.
+    for permit resubmittals and compliance documentation.
   </p>
 
 </main>
 
 <footer>
-  <div class="wrap" style="padding:32px 20px">
-    © 2026 Horizon MEP • <a href="blog.html" style="color:#cbd5f5">Back to Blog</a>
+  <div class="wrap">
+    © 2026 Horizon MEP •
+    <a href="blog.html" style="color:#cbd5f5">Back to Insights</a>
   </div>
 </footer>
 
