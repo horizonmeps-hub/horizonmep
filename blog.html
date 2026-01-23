@@ -3,56 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Insights & Articles | Horizon MEP</title>
   <meta name="description" content="Technical insights on MEP engineering, permitting, energy compliance, and construction coordination from Horizon MEP." />
 
   <meta name="theme-color" content="#3533cd" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical Base -->
   <base href="/horizonmep/">
 
+  <!-- SEO: Blog / CollectionPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Horizon MEP Insights",
+    "url": "https://www.horizonmep.com/blog.html",
+    "description": "Technical insights and articles on MEP engineering, permitting, and construction coordination.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Horizon MEP",
+      "url": "https://www.horizonmep.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.horizonmep.com/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Page-specific styles -->
   <style>
-    :root{
-      --black:#000000; --blue:#3533cd; --orange:#f2701e; --gray:#d3d8e3; --bg:#f6f8fc;
-      --grad-main: linear-gradient(90deg,#000000 0%,#3533cd 70%);
-      --grad-accent: linear-gradient(90deg,#3533cd 0%,#f2701e 100%);
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-      background:var(--bg);
-      color:#0b1a2b;
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-
-    header{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,0.9)}
-    .nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;color:white;font-weight:700}
-    .brand img{height:40px}
-    .nav-links{display:flex;gap:22px;align-items:center;color:#e5e7eb}
-    .nav-cta{padding:10px 16px;border-radius:10px;background:var(--grad-accent);color:white;font-weight:600}
-
-    section{padding:84px 20px}
-    .wrap{max-width:1200px;margin:auto}
-
     .page-hero{
       background:var(--grad-main);
       color:white;
       padding:96px 20px 72px;
     }
     .page-hero h1{
-      font-family:Poppins,sans-serif;
       font-size:clamp(32px,4vw,44px);
-      margin:0 0 16px;
+      margin-bottom:16px;
     }
     .page-hero p{
       max-width:780px;
-      color:#e5e7eb;
       font-size:18px;
+      color:#e5e7eb;
     }
 
     .posts{
@@ -68,6 +69,7 @@
       box-shadow:0 12px 36px rgba(15,23,42,0.08);
       transition:transform .25s ease, box-shadow .25s ease;
     }
+
     .post:hover{
       transform:translateY(-6px);
       box-shadow:0 20px 44px rgba(15,23,42,0.12);
@@ -90,45 +92,42 @@
       margin:6px 0 8px;
     }
 
-    .muted{color:#475569;font-size:14px}
-
-    footer{
-      background:#020617;
-      color:#cbd5f5;
-      padding:36px 20px;
-    }
-    .footer-wrap{
-      max-width:1200px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:24px;
+    .muted{
+      color:#475569;
+      font-size:14px;
     }
 
     @media(max-width:1024px){
-      .posts{grid-template-columns:1fr}
+      .posts{grid-template-columns:1fr;}
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+    <div class="brand">
+      <img src="logo.png" alt="Horizon MEP">Horizon MEP
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <div class="nav-links">
-    <a href="/horizonmep/">Home</a>
-    <a href="services.html">Engineering Services</a>
-    <a href="on-demand.html">On-Demand Project Support</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Insights</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a class="nav-cta" href="request-quote.html">Request a Quote</a>
+      <a href="/horizonmep/">Home</a>
+      <a href="services.html">Engineering Services</a>
+      <a href="on-demand.html">On-Demand Project Support</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="request-quote.html">Request a Quote</a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Insights & Articles</h1>
@@ -139,26 +138,34 @@
   </div>
 </section>
 
+<!-- BLOG LIST -->
 <section>
   <div class="wrap posts">
 
-    <!-- BLOG POST CARD -->
     <a class="post" href="blog/title-24-hvac-requirements.html">
       <span class="tag">Energy Compliance</span>
       <h2>Understanding Title-24 HVAC Requirements in California</h2>
-      <p class="muted">A practical overview of HVAC design considerations, energy modeling, and documentation needed for Title-24 compliance.</p>
+      <p class="muted">
+        HVAC design considerations, energy modeling, and documentation required
+        for Title-24 compliance.
+      </p>
     </a>
 
     <a class="post" href="blog/permit-ready-mep-drawings.html">
       <span class="tag">Permitting</span>
       <h2>What Makes an MEP Drawing “Permit-Ready”?</h2>
-      <p class="muted">Common reasons for permit rejections and how coordinated MEP drawings reduce delays.</p>
+      <p class="muted">
+        Common reasons for permit rejections and how coordinated MEP drawings
+        reduce approval delays.
+      </p>
     </a>
 
     <a class="post" href="blog/coordination-best-practices.html">
       <span class="tag">Coordination</span>
       <h2>MEP Coordination Best Practices for Multi-Family Projects</h2>
-      <p class="muted">How early coordination reduces RFIs, clashes, and change orders during construction.</p>
+      <p class="muted">
+        How early coordination minimizes RFIs, clashes, and construction change orders.
+      </p>
     </a>
 
   </div>
@@ -166,15 +173,32 @@
 
 <footer>
   <div class="footer-wrap">
+
     <div>
       <strong>Horizon MEP</strong><br>
       Professional MEP Engineering Services<br>
       services@horizonmep.com
     </div>
+
     <div>
-      © 2026 Horizon MEP<br>
-      Serving clients across the United States
+      <strong>Company</strong><br>
+      <a href="about.html">About</a><br>
+      <a href="projects.html">Projects</a><br>
+      <a href="careers.html">Careers</a><br>
+      <a href="contact.html">Contact</a>
     </div>
+
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy-policy.html">Privacy Policy</a><br>
+      <a href="terms-of-use.html">Terms of Use</a><br>
+      <a href="accessibility.html">Accessibility</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+    © 2026 Horizon MEP. All rights reserved.
   </div>
 </footer>
 
