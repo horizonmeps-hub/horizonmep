@@ -3,22 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
   <title>Projects & Case Studies | Horizon MEP</title>
-  <meta name="description" content="Selected MEP engineering projects demonstrating permit-ready design, coordination, and problem-solving across U.S. jurisdictions." />
-
-  <meta name="theme-color" content="#3533cd" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Base CSS -->
+  <meta name="description" content="Completed MEP engineering projects across residential and commercial developments in New Jersey and New York." />
   <link rel="stylesheet" href="CSS/base.css">
+  <base href="/horizonmep/">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.horizonmep.com/projects.html" />
-
-  <!-- Case Study Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,40 +22,19 @@
   }
   </script>
 
-  <!-- GitHub Pages Base -->
-  <base href="/horizonmep/">
-
-  <!-- Page-specific styles -->
   <style>
-    .page-hero{
-      background:var(--grad-main);
-      color:white;
-      padding:96px 20px 72px;
-    }
-    .page-hero h1{
-      font-size:clamp(32px,4vw,44px);
-      margin-bottom:16px;
-    }
-    .page-hero p{
-      max-width:760px;
-      font-size:18px;
-      color:#e5e7eb;
-    }
-
     .project{
       background:white;
       border-radius:18px;
       padding:32px;
       box-shadow:0 12px 36px rgba(15,23,42,0.08);
-      margin-bottom:56px;
+      margin-bottom:48px;
     }
-
-    .project-head{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:32px;
+    .project img{
+      width:100%;
+      border-radius:14px;
+      margin-bottom:12px;
     }
-
     .badge{
       display:inline-block;
       background:#eef2ff;
@@ -75,55 +43,7 @@
       border-radius:999px;
       font-size:12px;
       font-weight:600;
-      margin-bottom:8px;
-    }
-
-    .project h2{
-      margin:8px 0 8px;
-    }
-
-    .meta{
-      color:#475569;
-      font-size:14px;
-      margin-bottom:12px;
-    }
-
-    .problem-solution strong{
-      display:block;
-      margin-top:14px;
-    }
-
-    .pdf-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:12px;
-    }
-
-    .pdf{
-      border:1px solid #e5e7eb;
-      border-radius:12px;
-      overflow:hidden;
-      background:#f8fafc;
-    }
-
-    .pdf iframe{
-      width:100%;
-      height:220px;
-      border:0;
-    }
-
-    .pdf-label{
-      padding:10px;
-      text-align:center;
-      font-size:14px;
-      font-weight:600;
-      background:white;
-    }
-
-    @media(max-width:1024px){
-      .project-head{grid-template-columns:1fr}
-      .pdf-grid{grid-template-columns:1fr}
+      margin-bottom:6px;
     }
   </style>
 </head>
@@ -152,7 +72,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
     <h1>Selected Projects</h1>
@@ -163,88 +82,45 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section>
   <div class="wrap">
 
-    <!-- PROJECT 1 -->
     <div class="project">
-      <div class="project-head">
-        <div>
-          <span class="badge">Multi-Family Residential • California</span>
-          <h2>Permit-Ready MEP Design for Multi-Family Housing</h2>
-          <div class="meta">Mechanical • Electrical • Plumbing</div>
-
-          <div class="problem-solution">
-            <strong>Challenge</strong>
-            <p>
-              Fast-track permitting with strict Title-24 energy requirements
-              and AHJ coordination across multiple disciplines.
-            </p>
-
-            <strong>Our Solution</strong>
-            <p>
-              Delivered coordinated HVAC, electrical, and plumbing systems,
-              complete with energy compliance documentation and review responses.
-            </p>
-
-            <strong>Outcome</strong>
-            <p>
-              Permit-ready documents approved with minimal revisions,
-              allowing the project to stay on schedule.
-            </p>
-          </div>
-        </div>
-
-        <div class="pdf-grid">
-          <div class="pdf">
-            <iframe src="pdfs/P1MechHorizonMEP.pdf"></iframe>
-            <div class="pdf-label">Mechanical Drawings</div>
-          </div>
-          <div class="pdf">
-            <iframe src="pdfs/P1ElectHorizonMEP.pdf"></iframe>
-            <div class="pdf-label">Electrical Drawings</div>
-          </div>
-          <div class="pdf">
-            <iframe src="pdfs/P1SprikHorizonMEP.pdf"></iframe>
-            <div class="pdf-label">Plumbing Drawings</div>
-          </div>
-        </div>
-      </div>
+      <img src="images/projects/littleton.jpg" alt="206 Littleton Avenue project preview">
+      <span class="badge">Residential Alteration • Newark, NJ</span>
+      <h2>206 Littleton Avenue</h2>
+      <p>
+        Electrical and mechanical engineering for a residential alteration project
+        focused on modern infrastructure and code compliance.
+      </p>
+      <a class="btn-primary" href="206-littleton-ave.html">View Case Study</a>
     </div>
 
-    <!-- PROJECT 2 -->
     <div class="project">
-      <span class="badge">Tenant Improvement • New York</span>
-      <h2>Tenant Improvement Electrical Upgrade</h2>
-      <div class="meta">Electrical Engineering</div>
+      <img src="images/projects/fieldston.jpg" alt="4650 Fieldston Road project preview">
+      <span class="badge">Residential Development • Bronx, NY</span>
+      <h2>4650 Fieldston Road</h2>
+      <p>
+        Full MEP engineering for a multi-level residential property under strict
+        New York City building and energy codes.
+      </p>
+      <a class="btn-primary" href="4650-fieldston-rd.html">View Case Study</a>
+    </div>
 
-      <div class="problem-solution">
-        <strong>Challenge</strong>
-        <p>
-          Existing electrical systems required upgrades to support new tenant
-          loads while maintaining NEC compliance.
-        </p>
-
-        <strong>Our Solution</strong>
-        <p>
-          Redesigned electrical distribution, updated panel schedules,
-          and coordinated with architectural layouts for permit submission.
-        </p>
-      </div>
-
-      <div class="pdf-grid">
-        <div class="pdf">
-          <iframe src="pdfs/project2-electrical.pdf"></iframe>
-          <div class="pdf-label">Electrical Permit Set</div>
-        </div>
-      </div>
+    <div class="project">
+      <img src="images/projects/forest.jpg" alt="1 West Forest Avenue project preview">
+      <span class="badge">Commercial Retail & Cigar Lounge • New Jersey</span>
+      <h2>1 West Forest Avenue</h2>
+      <p>
+        Mixed-use commercial MEP and fire protection engineering with specialized
+        ventilation and life-safety systems.
+      </p>
+      <a class="btn-primary" href="1-west-forest-ave.html">View Case Study</a>
     </div>
 
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
   <h2>Looking for Similar Project Support?</h2>
   <p>Share your drawings and scope — we’ll respond within 24–48 hours.</p>
@@ -272,7 +148,7 @@
       <strong>Company</strong><br>
       <a href="about.html">About</a><br>
       <a href="projects.html">Projects</a><br>
-       <a href="blog.html">Insights</a><br>
+      <a href="blog.html">Insights</a><br>
       <a href="contact.html">Contact</a>
     </div>
 
