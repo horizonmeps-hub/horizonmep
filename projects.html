@@ -3,11 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Projects & Case Studies | Horizon MEP</title>
-  <meta name="description" content="Completed MEP engineering projects across residential and commercial developments in New Jersey and New York." />
-  <link rel="stylesheet" href="CSS/base.css">
-  <base href="/horizonmep/">
 
+  <title>Projects & Case Studies | Horizon MEP</title>
+  <meta name="description" content="Selected MEP engineering projects demonstrating permit-ready design, coordination, and problem-solving across U.S. jurisdictions." />
+  <meta name="theme-color" content="#3533cd" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Base CSS -->
+  <link rel="stylesheet" href="CSS/base.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.horizonmep.com/projects.html" />
+
+  <!-- Case Study Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,19 +32,40 @@
   }
   </script>
 
+  <!-- GitHub Pages Base -->
+  <base href="/horizonmep/">
+
+  <!-- Page-specific styles -->
   <style>
+    .page-hero{
+      background:var(--grad-main);
+      color:white;
+      padding:96px 20px 72px;
+    }
+    .page-hero h1{
+      font-size:clamp(32px,4vw,44px);
+      margin-bottom:16px;
+    }
+    .page-hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#e5e7eb;
+    }
+
     .project{
       background:white;
       border-radius:18px;
       padding:32px;
       box-shadow:0 12px 36px rgba(15,23,42,0.08);
-      margin-bottom:48px;
+      margin-bottom:56px;
     }
-    .project img{
-      width:100%;
-      border-radius:14px;
-      margin-bottom:12px;
+
+    .project-head{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:32px;
     }
+
     .badge{
       display:inline-block;
       background:#eef2ff;
@@ -43,7 +74,56 @@
       border-radius:999px;
       font-size:12px;
       font-weight:600;
-      margin-bottom:6px;
+      margin-bottom:8px;
+    }
+
+    .project h2{
+      margin:8px 0 8px;
+    }
+
+    .meta{
+      color:#475569;
+      font-size:14px;
+      margin-bottom:12px;
+    }
+
+    .problem-solution strong{
+      display:block;
+      margin-top:14px;
+    }
+
+    .preview-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:12px;
+    }
+
+    .preview{
+      border:1px solid #e5e7eb;
+      border-radius:12px;
+      overflow:hidden;
+      background:#f8fafc;
+    }
+
+    .preview img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .preview-label{
+      padding:10px;
+      text-align:center;
+      font-size:14px;
+      font-weight:600;
+      background:white;
+    }
+
+    @media(max-width:1024px){
+      .project-head{grid-template-columns:1fr}
+      .preview-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -72,9 +152,10 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="wrap">
-    <h1>MEP Engineering Projects & Case Studies</h1>
+    <h1>Selected Projects</h1>
     <p>
       Representative MEP engineering work highlighting coordinated design,
       permitting expertise, and real-world problem solving.
@@ -82,45 +163,149 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section>
   <div class="wrap">
 
+    <!-- PROJECT 1 -->
     <div class="project">
-      <img src="images/projects/littleton.jpg" alt="206 Littleton Avenue project preview">
-      <span class="badge">Residential Alteration • Newark, NJ</span>
-      <h2>206 Littleton Avenue</h2>
-      <p>
-        Electrical and mechanical engineering for a residential alteration project
-        focused on modern infrastructure and code compliance.
-      </p>
-      <a class="btn-primary" href="206-littleton-ave.html">View Case Study</a>
+      <div class="project-head">
+        <div>
+          <span class="badge">Residential Alteration • Newark, NJ</span>
+          <h2>206 Littleton Avenue</h2>
+          <div class="meta">Mechanical • Electrical</div>
+
+          <div class="problem-solution">
+            <strong>Challenge</strong>
+            <p>
+              Retrofitting modern MEP systems into an existing residential structure while maintaining strict code compliance.
+            </p>
+
+            <strong>Our Solution</strong>
+            <p>
+              Engineered a 120/208V 3-phase electrical system with LED lighting, emergency battery backup, and dedicated appliance circuits coordinated for clash-free installation.
+            </p>
+
+            <strong>Outcome</strong>
+            <p>
+              Delivered a permit-ready, energy-efficient design that transitioned smoothly from design to construction.
+            </p>
+          </div>
+
+          <a class="btn-primary" href="206-littleton-ave.html">View Case Study</a>
+        </div>
+
+        <div class="preview-grid">
+          <div class="preview">
+            <img src="images/projects/littleton.jpg" alt="Electrical plan preview">
+            <div class="preview-label">Electrical Layout</div>
+          </div>
+          <div class="preview">
+            <img src="images/projects/littleton.jpg" alt="Lighting plan preview">
+            <div class="preview-label">Lighting Plan</div>
+          </div>
+          <div class="preview">
+            <img src="images/projects/littleton.jpg" alt="Panel schedule preview">
+            <div class="preview-label">Panel Schedules</div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- PROJECT 2 -->
     <div class="project">
-      <img src="images/projects/fieldston.jpg" alt="4650 Fieldston Road project preview">
-      <span class="badge">Residential Development • Bronx, NY</span>
-      <h2>4650 Fieldston Road</h2>
-      <p>
-        Full MEP engineering for a multi-level residential property under strict
-        New York City building and energy codes.
-      </p>
-      <a class="btn-primary" href="4650-fieldston-rd.html">View Case Study</a>
+      <div class="project-head">
+        <div>
+          <span class="badge">Residential Development • Bronx, NY</span>
+          <h2>4650 Fieldston Road</h2>
+          <div class="meta">Mechanical • Electrical • Plumbing</div>
+
+          <div class="problem-solution">
+            <strong>Challenge</strong>
+            <p>
+              Coordinating multi-level MEP systems while meeting stringent New York City mechanical, plumbing, and energy codes.
+            </p>
+
+            <strong>Our Solution</strong>
+            <p>
+              Designed multi-zone HVAC, LED lighting, and coordinated plumbing systems including gas-fired water heating with freeze protection.
+            </p>
+
+            <strong>Outcome</strong>
+            <p>
+              Delivered a fully integrated, permit-ready design maximizing usable living space across all floors.
+            </p>
+          </div>
+
+          <a class="btn-primary" href="4650-fieldston-rd.html">View Case Study</a>
+        </div>
+
+        <div class="preview-grid">
+          <div class="preview">
+            <img src="images/projects/fieldston.jpg" alt="HVAC layout preview">
+            <div class="preview-label">HVAC Layout</div>
+          </div>
+          <div class="preview">
+            <img src="images/projects/fieldston.jpg" alt="Electrical plan preview">
+            <div class="preview-label">Electrical Plan</div>
+          </div>
+          <div class="preview">
+            <img src="images/projects/fieldston.jpg" alt="Plumbing riser preview">
+            <div class="preview-label">Plumbing Riser</div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- PROJECT 3 -->
     <div class="project">
-      <img src="images/projects/forest.jpg" alt="1 West Forest Avenue project preview">
-      <span class="badge">Commercial Retail & Cigar Lounge • New Jersey</span>
-      <h2>1 West Forest Avenue</h2>
-      <p>
-        Mixed-use commercial MEP and fire protection engineering with specialized
-        ventilation and life-safety systems.
-      </p>
-      <a class="btn-primary" href="1-west-forest-ave.html">View Case Study</a>
+      <div class="project-head">
+        <div>
+          <span class="badge">Commercial Retail & Cigar Lounge • New Jersey</span>
+          <h2>1 West Forest Avenue</h2>
+          <div class="meta">Mechanical • Electrical • Fire Protection</div>
+
+          <div class="problem-solution">
+            <strong>Challenge</strong>
+            <p>
+              Designing high-volume smoke exhaust and fire protection systems for a mixed-use retail and cigar lounge environment.
+            </p>
+
+            <strong>Our Solution</strong>
+            <p>
+              Implemented VRF HVAC, a dedicated 1,200 CFM exhaust system, decorative LED lighting, and a wet-pipe sprinkler system meeting NFPA-13.
+            </p>
+
+            <strong>Outcome</strong>
+            <p>
+              Delivered a coordinated construction document set that passed permitting without delay and met aggressive schedule targets.
+            </p>
+          </div>
+
+          <a class="btn-primary" href="1-west-forest-ave.html">View Case Study</a>
+        </div>
+
+        <div class="preview-grid">
+          <div class="preview">
+            <img src="images/projects/forest.jpg" alt="HVAC layout preview">
+            <div class="preview-label">HVAC System</div>
+          </div>
+          <div class="preview">
+            <img src="images/projects/forest.jpg" alt="Lighting layout preview">
+            <div class="preview-label">Lighting Design</div>
+          </div>
+          <div class="preview">
+            <img src="images/projects/forest.jpg" alt="Sprinkler layout preview">
+            <div class="preview-label">Fire Protection</div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Looking for Similar Project Support?</h2>
   <p>Share your drawings and scope — we’ll respond within 24–48 hours.</p>
