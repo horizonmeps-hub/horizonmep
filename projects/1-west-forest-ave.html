@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>1 West Forest Avenue | Horizon MEP</title>
+<meta name="description" content="Retail and cigar lounge MEP and fire protection engineering project in New Jersey."/>
+<link rel="stylesheet" href="CSS/base.css">
+<base href="/horizonmep/">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Project","name":"1 West Forest Avenue Commercial Project","location":"New Jersey","provider":{"@type":"Organization","name":"Horizon MEP"}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://www.horizonmep.com/"},
+{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.horizonmep.com/projects.html"},
+{"@type":"ListItem","position":3,"name":"1 West Forest Avenue","item":"https://www.horizonmep.com/1-west-forest-ave.html"}
+]}
+</script>
+
+<style>
+.pdf-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:24px}
+.pdf canvas{width:100%;border:1px solid #e5e7eb;border-radius:12px}
+.pdf a{display:block;text-align:center;font-weight:600;padding:10px}
+</style>
+</head>
+
+<body>
+
+<header>...same structure as above header...</header>
+
+<section class="page-hero">
+<div class="wrap">
+<h1>Commercial Retail & Cigar Lounge</h1>
+<p>1 West Forest Avenue | New Jersey</p>
+</div>
+</section>
+
+<section>
+<div class="wrap project">
+
+<h2>The Challenges</h2>
+<ul>
+<li>High-volume smoke extraction and odor control without affecting adjacent retail areas.</li>
+<li>Retrofitting a new wet-pipe sprinkler system to meet NFPA 13 within an existing structure.</li>
+<li>Exceeding ASHRAE 90.1-2019 energy efficiency standards for New Jersey.</li>
+</ul>
+
+<h2>The Horizon MEP Solution</h2>
+<ul>
+<li>Designed a VRF cassette and concealed HVAC system with a dedicated 1,200 CFM cigar lounge exhaust system (EF-5).</li>
+<li>Developed a custom electrical and lighting plan featuring chandeliers, pendant fixtures, LED cabinetry lighting, and advanced occupancy controls.</li>
+<li>Engineered a wet-pipe sprinkler system with full hydraulic calculations and coordinated pendent and upright head layouts.</li>
+<li>Performed detailed load calculations (34.5 tons cooling / 52.2 tons heating) to optimize equipment sizing and reduce capital costs.</li>
+</ul>
+
+<h2>The Result</h2>
+<p>A permit-approved, luxury commercial space delivered on schedule with high-performance mechanical, electrical, and fire protection systems.</p>
+
+<div class="pdf-grid">
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P3ElectHorizonMEP.pdf"></canvas><a href="pdfs/P3ElectHorizonMEP.pdf" download>Download Electrical</a></div>
+</div>
+
+</div>
+</section>
+
+<footer>...same structure as above footer...</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+document.querySelectorAll('.pdf-thumb').forEach(async c=>{
+const pdf=await pdfjsLib.getDocument(c.dataset.pdf).promise;
+const page=await pdf.getPage(1);
+const v=page.getViewport({scale:0.6});
+c.width=v.width;c.height=v.height;
+page.render({canvasContext:c.getContext("2d"),viewport:v});
+});
+</script>
+
+</body>
+</html>
