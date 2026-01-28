@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>4650 Fieldston Road | Horizon MEP</title>
+<meta name="description" content="Residential development MEP engineering project in Bronx, NY by Horizon MEP."/>
+<link rel="stylesheet" href="CSS/base.css">
+<base href="/horizonmep/">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Project","name":"4650 Fieldston Road Residential Development","location":"Bronx, NY","provider":{"@type":"Organization","name":"Horizon MEP"}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://www.horizonmep.com/"},
+{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.horizonmep.com/projects.html"},
+{"@type":"ListItem","position":3,"name":"4650 Fieldston Road","item":"https://www.horizonmep.com/4650-fieldston-rd.html"}
+]}
+</script>
+
+<style>
+.pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.pdf canvas{width:100%;border:1px solid #e5e7eb;border-radius:12px}
+.pdf a{display:block;text-align:center;font-weight:600;padding:10px}
+@media(max-width:768px){.pdf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<header>...same structure as above header...</header>
+
+<section class="page-hero">
+<div class="wrap">
+<h1>Residential Development</h1>
+<p>4650 Fieldston Road | Bronx, NY</p>
+</div>
+</section>
+
+<section>
+<div class="wrap project">
+
+<h2>The Challenges</h2>
+<ul>
+<li>Coordinating MEP systems across cellar, first floor, second floor, and attic levels.</li>
+<li>Meeting 2022 NYC Mechanical, Plumbing, and Fuel Gas Codes and the 2020 NYC Energy Conservation Code (NYCECC).</li>
+<li>Replacing outdated plumbing and mechanical systems while preserving structural integrity.</li>
+</ul>
+
+<h2>The Horizon MEP Solution</h2>
+<ul>
+<li>Designed a multi-zone HVAC system using high-efficiency heat pump split systems (1–2 ton capacities) with dedicated exhaust for bathrooms, laundry, and kitchens.</li>
+<li>Developed a complete LED lighting and power distribution plan with GFCI-protected, weather-resistant exterior receptacles.</li>
+<li>Engineered a new gas-fired water heater (100 MBH) and a coordinated sanitary waste and vent system with freeze protection for cold areas.</li>
+<li>All systems were designed to pass NYC Special Inspections and meet NYCECC energy performance requirements.</li>
+</ul>
+
+<h2>The Result</h2>
+<p>A fully integrated, permit-ready MEP design that maximized usable living space and enabled smooth construction with high-efficiency long-term performance.</p>
+
+<div class="pdf-grid">
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P2ElectHorizonMEP.pdf"></canvas><a href="pdfs/P2ElectHorizonMEP.pdf" download>Download Electrical</a></div>
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P2MechHorizonMEP.pdf"></canvas><a href="pdfs/P2MechHorizonMEP.pdf" download>Download Mechanical</a></div>
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P2PlumbHorizonMEP.pdf"></canvas><a href="pdfs/P2PlumbHorizonMEP.pdf" download>Download Plumbing</a></div>
+</div>
+
+</div>
+</section>
+
+<footer>...same structure as above footer...</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+document.querySelectorAll('.pdf-thumb').forEach(async c=>{
+const pdf=await pdfjsLib.getDocument(c.dataset.pdf).promise;
+const page=await pdf.getPage(1);
+const v=page.getViewport({scale:0.6});
+c.width=v.width;c.height=v.height;
+page.render({canvasContext:c.getContext("2d"),viewport:v});
+});
+</script>
+
+</body>
+</html>
