@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+
 <title>1 West Forest Avenue | Horizon MEP</title>
-<meta name="description" content="Retail and cigar lounge MEP and fire protection engineering project in New Jersey."/>
-<link rel="stylesheet" href="CSS/base.css">
-<base href="/horizonmep/">
+<meta name="description" content="Commercial retail and cigar lounge MEP and fire protection engineering project in New Jersey."/>
+<meta name="theme-color" content="#3533cd"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/base.css">
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Project","name":"1 West Forest Avenue Commercial Project","location":"New Jersey","provider":{"@type":"Organization","name":"Horizon MEP"}}
@@ -16,20 +19,41 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Home","item":"https://www.horizonmep.com/"},
 {"@type":"ListItem","position":2,"name":"Projects","item":"https://www.horizonmep.com/projects.html"},
-{"@type":"ListItem","position":3,"name":"1 West Forest Avenue","item":"https://www.horizonmep.com/1-west-forest-ave.html"}
+{"@type":"ListItem","position":3,"name":"1 West Forest Avenue","item":"https://www.horizonmep.com/projects/1-west-forest-ave.html"}
 ]}
 </script>
 
 <style>
+.page-hero{background:var(--grad-main);color:white;padding:96px 20px 72px}
+.page-hero h1{font-size:clamp(32px,4vw,44px);margin-bottom:16px}
+.page-hero p{max-width:760px;font-size:18px;color:#e5e7eb}
+.project{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 36px rgba(15,23,42,0.08);margin-bottom:56px}
 .pdf-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:24px}
-.pdf canvas{width:100%;border:1px solid #e5e7eb;border-radius:12px}
-.pdf a{display:block;text-align:center;font-weight:600;padding:10px}
+.pdf{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#f8fafc}
+.pdf canvas{width:100%;display:block}
+.pdf-label{padding:10px;text-align:center;font-size:14px;font-weight:600;background:white}
 </style>
 </head>
 
 <body>
 
-<header>...same structure as above header...</header>
+<header>
+<div class="nav">
+<div class="brand"><img src="../logo.png" alt="Horizon MEP">Horizon MEP</div>
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-icon">☰</label>
+<div class="nav-links">
+<a href="/horizonmep/">Home</a>
+<a href="../services.html">Engineering Services</a>
+<a href="../on-demand.html">On-Demand Project Support</a>
+<a href="../projects.html">Projects</a>
+<a href="../blog.html">Insights</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+<a class="nav-cta" href="../request-quote.html">Request a Quote</a>
+</div>
+</div>
+</header>
 
 <section class="page-hero">
 <div class="wrap">
@@ -39,43 +63,61 @@
 </section>
 
 <section>
-<div class="wrap project">
+<div class="wrap">
+<div class="project">
 
 <h2>The Challenges</h2>
 <ul>
-<li>High-volume smoke extraction and odor control without affecting adjacent retail areas.</li>
-<li>Retrofitting a new wet-pipe sprinkler system to meet NFPA 13 within an existing structure.</li>
+<li>Engineering high-volume smoke extraction and odor control without affecting adjacent retail areas.</li>
+<li>Retrofitting a new wet-pipe sprinkler system into an existing structure to meet NFPA 13 requirements.</li>
 <li>Exceeding ASHRAE 90.1-2019 energy efficiency standards for New Jersey.</li>
 </ul>
 
 <h2>The Horizon MEP Solution</h2>
 <ul>
-<li>Designed a VRF cassette and concealed HVAC system with a dedicated 1,200 CFM cigar lounge exhaust system (EF-5).</li>
-<li>Developed a custom electrical and lighting plan featuring chandeliers, pendant fixtures, LED cabinetry lighting, and advanced occupancy controls.</li>
-<li>Engineered a wet-pipe sprinkler system with full hydraulic calculations and coordinated pendent and upright head layouts.</li>
-<li>Performed detailed load calculations (34.5 tons cooling / 52.2 tons heating) to optimize equipment sizing and reduce capital costs.</li>
+<li>Designed a VRF cassette and concealed HVAC system with a dedicated 1,200 CFM exhaust system (EF-5) for the cigar lounge.</li>
+<li>Developed a custom electrical and lighting plan with chandeliers, pendant fixtures, LED cabinetry lighting, and advanced occupancy controls.</li>
+<li>Engineered a wet-pipe sprinkler system with full hydraulic calculations and coordinated pendent and upright sprinkler head layouts.</li>
+<li>Performed load calculations (34.5 tons cooling / 52.2 tons heating) to optimize equipment sizing and reduce capital costs.</li>
 </ul>
 
 <h2>The Result</h2>
-<p>A permit-approved, luxury commercial space delivered on schedule with high-performance mechanical, electrical, and fire protection systems.</p>
+<p>
+A permit-approved, luxury commercial destination delivered within the client’s aggressive schedule, combining high-performance mechanical, electrical, and fire protection systems.
+</p>
 
 <div class="pdf-grid">
-<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P3ElectHorizonMEP.pdf"></canvas><a href="pdfs/P3ElectHorizonMEP.pdf" download>Download Electrical</a></div>
+  <div class="pdf">
+    <a href="../pdfs/P3ElectHorizonMEP.pdf" download>
+      <canvas class="pdf-thumb" data-pdf="../pdfs/P3ElectHorizonMEP.pdf"></canvas>
+    </a>
+    <div class="pdf-label">Electrical Drawings</div>
+  </div>
 </div>
 
+</div>
 </div>
 </section>
 
-<footer>...same structure as above footer...</footer>
+<footer>
+<div class="footer-wrap">
+<div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br><a href="mailto:services@horizonmep.com">services@horizonmep.com</a></div>
+<div><strong>Services</strong><br><a href="../services.html">Engineering Services</a><br><a href="../on-demand.html">On-Demand Project Support</a></div>
+<div><strong>Company</strong><br><a href="../about.html">About</a><br><a href="../projects.html">Projects</a><br><a href="../blog.html">Insights</a><br><a href="../contact.html">Contact</a></div>
+<div><strong>Legal</strong><br><a href="../privacy-policy.html">Privacy Policy</a><br><a href="../terms-of-use.html">Terms of Use</a></div>
+</div>
+<div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">© 2026 Horizon MEP. All rights reserved.</div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
-document.querySelectorAll('.pdf-thumb').forEach(async c=>{
-const pdf=await pdfjsLib.getDocument(c.dataset.pdf).promise;
-const page=await pdf.getPage(1);
-const v=page.getViewport({scale:0.6});
-c.width=v.width;c.height=v.height;
-page.render({canvasContext:c.getContext("2d"),viewport:v});
+document.querySelectorAll('.pdf-thumb').forEach(async canvas=>{
+  const pdf = await pdfjsLib.getDocument(canvas.dataset.pdf).promise;
+  const page = await pdf.getPage(1);
+  const viewport = page.getViewport({scale:0.6});
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+  page.render({canvasContext: canvas.getContext("2d"), viewport});
 });
 </script>
 
