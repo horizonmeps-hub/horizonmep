@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>206 Littleton Avenue | Horizon MEP</title>
+<meta name="description" content="Residential alteration project in Newark, NJ with electrical and mechanical engineering services by Horizon MEP."/>
+<link rel="stylesheet" href="CSS/base.css">
+<base href="/horizonmep/">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Project","name":"206 Littleton Avenue Residential Alteration","location":"Newark, NJ","provider":{"@type":"Organization","name":"Horizon MEP"}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://www.horizonmep.com/"},
+{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.horizonmep.com/projects.html"},
+{"@type":"ListItem","position":3,"name":"206 Littleton Avenue","item":"https://www.horizonmep.com/206-littleton-ave.html"}
+]}
+</script>
+
+<style>
+.pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.pdf canvas{width:100%;border:1px solid #e5e7eb;border-radius:12px}
+.pdf a{display:block;text-align:center;font-weight:600;padding:10px}
+@media(max-width:768px){.pdf-grid{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-icon">☰</label>
+<div class="nav-links">
+<a href="/horizonmep/">Home</a>
+<a href="services.html">Engineering Services</a>
+<a href="on-demand.html">On-Demand Project Support</a>
+<a href="projects.html">Projects</a>
+<a href="blog.html">Insights</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a class="nav-cta" href="request-quote.html">Request a Quote</a>
+</div>
+</div>
+</header>
+
+<section class="page-hero">
+<div class="wrap">
+<h1>Residential Alteration</h1>
+<p>206 Littleton Avenue | Newark, NJ</p>
+</div>
+</section>
+
+<section>
+<div class="wrap project">
+
+<h2>The Challenges</h2>
+<ul>
+<li>Upgrading electrical systems to support modern residential loads while maintaining compatibility with existing utilities.</li>
+<li>Full compliance with the 2021 International Building, Mechanical, and Fuel Gas Codes and the 2021 National Electrical Code (NEC).</li>
+<li>Clash-free routing of feeders, raceways, and mechanical equipment within limited basement and residential floor space.</li>
+</ul>
+
+<h2>The Horizon MEP Solution</h2>
+<ul>
+<li>Engineered a 120/208V, 3-phase electrical distribution system with high-efficiency LED lighting, emergency battery packs, and occupancy controls meeting ASHRAE 90.1-2019.</li>
+<li>Specified GFCI-protected and weather-resistant exterior receptacles and detailed fire-rated wall penetrations with approved sleeves and seals.</li>
+<li>Designed dedicated circuits for electric water heaters and exhaust systems with proper overcurrent protection and disconnecting means.</li>
+<li>Produced detailed symbolic layouts and circuit schedules to reduce field conflicts and construction delays.</li>
+</ul>
+
+<h2>The Result</h2>
+<p>The project transitioned smoothly from design to construction with a permit-ready electrical and mechanical package that enhanced safety, energy efficiency, and long-term reliability.</p>
+
+<div class="pdf-grid">
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P1ElectHorizonMEP.pdf"></canvas><a href="pdfs/P1ElectHorizonMEP.pdf" download>Download Electrical</a></div>
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P1MechHorizonMEP.pdf"></canvas><a href="pdfs/P1MechHorizonMEP.pdf" download>Download Mechanical</a></div>
+<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P1SprikHorizonMEP.pdf"></canvas><a href="pdfs/P1SprikHorizonMEP.pdf" download>Download Plumbing</a></div>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="footer-wrap">
+<div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br><a href="mailto:services@horizonmep.com">services@horizonmep.com</a></div>
+<div><strong>Services</strong><br><a href="services.html">Engineering Services</a><br><a href="on-demand.html">On-Demand Project Support</a></div>
+<div><strong>Company</strong><br><a href="about.html">About</a><br><a href="projects.html">Projects</a><br><a href="blog.html">Insights</a><br><a href="contact.html">Contact</a></div>
+<div><strong>Legal</strong><br><a href="privacy-policy.html">Privacy Policy</a><br><a href="terms-of-use.html">Terms of Use</a></div>
+</div>
+<div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">© 2026 Horizon MEP. All rights reserved.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+document.querySelectorAll('.pdf-thumb').forEach(async c=>{
+const pdf=await pdfjsLib.getDocument(c.dataset.pdf).promise;
+const page=await pdf.getPage(1);
+const v=page.getViewport({scale:0.6});
+c.width=v.width;c.height=v.height;
+page.render({canvasContext:c.getContext("2d"),viewport:v});
+});
+</script>
+
+</body>
+</html>
