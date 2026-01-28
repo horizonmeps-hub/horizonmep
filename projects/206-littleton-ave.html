@@ -5,13 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>206 Littleton Avenue | Horizon MEP</title>
 <meta name="description" content="Residential alteration project in Newark, NJ with electrical and mechanical engineering services by Horizon MEP."/>
+<meta name="theme-color" content="#3533cd" />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="CSS/base.css">
 <base href="/horizonmep/">
 
+<!-- Project Schema -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Project","name":"206 Littleton Avenue Residential Alteration","location":"Newark, NJ","provider":{"@type":"Organization","name":"Horizon MEP"}}
 </script>
 
+<!-- Breadcrumb Schema -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Home","item":"https://www.horizonmep.com/"},
@@ -21,10 +28,51 @@
 </script>
 
 <style>
-.pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-.pdf canvas{width:100%;border:1px solid #e5e7eb;border-radius:12px}
-.pdf a{display:block;text-align:center;font-weight:600;padding:10px}
-@media(max-width:768px){.pdf-grid{grid-template-columns:1fr}}
+.page-hero{
+  background:var(--grad-main);
+  color:white;
+  padding:96px 20px 72px;
+}
+.page-hero h1{
+  font-size:clamp(32px,4vw,44px);
+  margin-bottom:8px;
+}
+.page-hero p{
+  font-size:18px;
+  color:#e5e7eb;
+}
+
+.project{
+  background:white;
+  border-radius:18px;
+  padding:32px;
+  box-shadow:0 12px 36px rgba(15,23,42,0.08);
+  margin-top:-48px;
+}
+
+.pdf-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:24px;
+}
+
+.pdf canvas{
+  width:100%;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+}
+
+.pdf a{
+  display:block;
+  text-align:center;
+  font-weight:600;
+  padding:10px;
+}
+
+@media(max-width:1024px){
+  .pdf-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 
@@ -48,6 +96,7 @@
 </div>
 </header>
 
+<!-- HERO -->
 <section class="page-hero">
 <div class="wrap">
 <h1>Residential Alteration</h1>
@@ -55,6 +104,7 @@
 </div>
 </section>
 
+<!-- CONTENT -->
 <section>
 <div class="wrap project">
 
@@ -74,12 +124,23 @@
 </ul>
 
 <h2>The Result</h2>
-<p>The project transitioned smoothly from design to construction with a permit-ready electrical and mechanical package that enhanced safety, energy efficiency, and long-term reliability.</p>
+<p>
+The project transitioned smoothly from design to construction with a permit-ready electrical and mechanical package that enhanced safety, energy efficiency, and long-term reliability.
+</p>
 
 <div class="pdf-grid">
-<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P1ElectHorizonMEP.pdf"></canvas><a href="pdfs/P1ElectHorizonMEP.pdf" download>Download Electrical</a></div>
-<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P1MechHorizonMEP.pdf"></canvas><a href="pdfs/P1MechHorizonMEP.pdf" download>Download Mechanical</a></div>
-<div class="pdf"><canvas class="pdf-thumb" data-pdf="pdfs/P1SprikHorizonMEP.pdf"></canvas><a href="pdfs/P1SprikHorizonMEP.pdf" download>Download Plumbing</a></div>
+<div class="pdf">
+<canvas class="pdf-thumb" data-pdf="pdfs/P1ElectHorizonMEP.pdf"></canvas>
+<a href="pdfs/P1ElectHorizonMEP.pdf" download>Download Electrical</a>
+</div>
+<div class="pdf">
+<canvas class="pdf-thumb" data-pdf="pdfs/P1MechHorizonMEP.pdf"></canvas>
+<a href="pdfs/P1MechHorizonMEP.pdf" download>Download Mechanical</a>
+</div>
+<div class="pdf">
+<canvas class="pdf-thumb" data-pdf="pdfs/P1SprikHorizonMEP.pdf"></canvas>
+<a href="pdfs/P1SprikHorizonMEP.pdf" download>Download Plumbing</a>
+</div>
 </div>
 
 </div>
@@ -101,7 +162,8 @@ document.querySelectorAll('.pdf-thumb').forEach(async c=>{
 const pdf=await pdfjsLib.getDocument(c.dataset.pdf).promise;
 const page=await pdf.getPage(1);
 const v=page.getViewport({scale:0.6});
-c.width=v.width;c.height=v.height;
+c.width=v.width;
+c.height=v.height;
 page.render({canvasContext:c.getContext("2d"),viewport:v});
 });
 </script>
