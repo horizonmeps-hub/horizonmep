@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+
 <title>206 Littleton Avenue | Horizon MEP</title>
 <meta name="description" content="Residential alteration project in Newark, NJ with electrical and mechanical engineering services by Horizon MEP."/>
-<meta name="theme-color" content="#3533cd" />
+<meta name="theme-color" content="#3533cd"/>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<!-- Base CSS -->
 <link rel="stylesheet" href="CSS/base.css">
+
 <base href="/horizonmep/">
 
 <!-- Project Schema -->
@@ -27,6 +30,7 @@
 ]}
 </script>
 
+<!-- Page-specific styles (MATCHING your projects.html) -->
 <style>
 .page-hero{
   background:var(--grad-main);
@@ -35,9 +39,10 @@
 }
 .page-hero h1{
   font-size:clamp(32px,4vw,44px);
-  margin-bottom:8px;
+  margin-bottom:16px;
 }
 .page-hero p{
+  max-width:760px;
   font-size:18px;
   color:#e5e7eb;
 }
@@ -47,7 +52,7 @@
   border-radius:18px;
   padding:32px;
   box-shadow:0 12px 36px rgba(15,23,42,0.08);
-  margin-top:-48px;
+  margin-bottom:56px;
 }
 
 .pdf-grid{
@@ -57,17 +62,24 @@
   margin-top:24px;
 }
 
-.pdf canvas{
-  width:100%;
+.pdf{
   border:1px solid #e5e7eb;
   border-radius:12px;
+  overflow:hidden;
+  background:#f8fafc;
 }
 
-.pdf a{
+.pdf canvas{
+  width:100%;
   display:block;
-  text-align:center;
-  font-weight:600;
+}
+
+.pdf-label{
   padding:10px;
+  text-align:center;
+  font-size:14px;
+  font-weight:600;
+  background:white;
 }
 
 @media(max-width:1024px){
@@ -80,18 +92,22 @@
 
 <header>
 <div class="nav">
-<div class="brand"><img src="logo.png" alt="Horizon MEP">Horizon MEP</div>
+<div class="brand">
+  <img src="logo.png" alt="Horizon MEP">Horizon MEP
+</div>
+
 <input type="checkbox" id="menu-toggle">
 <label for="menu-toggle" class="menu-icon">☰</label>
+
 <div class="nav-links">
-<a href="/horizonmep/">Home</a>
-<a href="services.html">Engineering Services</a>
-<a href="on-demand.html">On-Demand Project Support</a>
-<a href="projects.html">Projects</a>
-<a href="blog.html">Insights</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a class="nav-cta" href="request-quote.html">Request a Quote</a>
+  <a href="/horizonmep/">Home</a>
+  <a href="services.html">Engineering Services</a>
+  <a href="on-demand.html">On-Demand Project Support</a>
+  <a href="projects.html">Projects</a>
+  <a href="blog.html">Insights</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a class="nav-cta" href="request-quote.html">Request a Quote</a>
 </div>
 </div>
 </header>
@@ -106,7 +122,9 @@
 
 <!-- CONTENT -->
 <section>
-<div class="wrap project">
+<div class="wrap">
+
+<div class="project">
 
 <h2>The Challenges</h2>
 <ul>
@@ -129,42 +147,69 @@ The project transitioned smoothly from design to construction with a permit-read
 </p>
 
 <div class="pdf-grid">
-<div class="pdf">
-<canvas class="pdf-thumb" data-pdf="pdfs/P1ElectHorizonMEP.pdf"></canvas>
-<a href="pdfs/P1ElectHorizonMEP.pdf" download>Download Electrical</a>
-</div>
-<div class="pdf">
-<canvas class="pdf-thumb" data-pdf="pdfs/P1MechHorizonMEP.pdf"></canvas>
-<a href="pdfs/P1MechHorizonMEP.pdf" download>Download Mechanical</a>
-</div>
-<div class="pdf">
-<canvas class="pdf-thumb" data-pdf="pdfs/P1SprikHorizonMEP.pdf"></canvas>
-<a href="pdfs/P1SprikHorizonMEP.pdf" download>Download Plumbing</a>
-</div>
+  <div class="pdf">
+    <canvas class="pdf-thumb" data-pdf="pdfs/P1ElectHorizonMEP.pdf"></canvas>
+    <div class="pdf-label">Electrical Drawings</div>
+  </div>
+  <div class="pdf">
+    <canvas class="pdf-thumb" data-pdf="pdfs/P1MechHorizonMEP.pdf"></canvas>
+    <div class="pdf-label">Mechanical Drawings</div>
+  </div>
+  <div class="pdf">
+    <canvas class="pdf-thumb" data-pdf="pdfs/P1SprikHorizonMEP.pdf"></canvas>
+    <div class="pdf-label">Plumbing Drawings</div>
+  </div>
 </div>
 
+</div>
 </div>
 </section>
 
 <footer>
 <div class="footer-wrap">
-<div><strong>Horizon MEP</strong><br>Professional MEP Engineering Services<br><a href="mailto:services@horizonmep.com">services@horizonmep.com</a></div>
-<div><strong>Services</strong><br><a href="services.html">Engineering Services</a><br><a href="on-demand.html">On-Demand Project Support</a></div>
-<div><strong>Company</strong><br><a href="about.html">About</a><br><a href="projects.html">Projects</a><br><a href="blog.html">Insights</a><br><a href="contact.html">Contact</a></div>
-<div><strong>Legal</strong><br><a href="privacy-policy.html">Privacy Policy</a><br><a href="terms-of-use.html">Terms of Use</a></div>
+
+<div>
+<strong>Horizon MEP</strong><br>
+Professional MEP Engineering Services<br>
+<a href="mailto:services@horizonmep.com">services@horizonmep.com</a>
 </div>
-<div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">© 2026 Horizon MEP. All rights reserved.</div>
+
+<div>
+<strong>Services</strong><br>
+<a href="services.html">Engineering Services</a><br>
+<a href="on-demand.html">On-Demand Project Support</a>
+</div>
+
+<div>
+<strong>Company</strong><br>
+<a href="about.html">About</a><br>
+<a href="projects.html">Projects</a><br>
+<a href="blog.html">Insights</a><br>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<strong>Legal</strong><br>
+<a href="privacy-policy.html">Privacy Policy</a><br>
+<a href="terms-of-use.html">Terms of Use</a>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:24px;color:#94a3b8;font-size:14px">
+© 2026 Horizon MEP. All rights reserved.
+</div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
-document.querySelectorAll('.pdf-thumb').forEach(async c=>{
-const pdf=await pdfjsLib.getDocument(c.dataset.pdf).promise;
-const page=await pdf.getPage(1);
-const v=page.getViewport({scale:0.6});
-c.width=v.width;
-c.height=v.height;
-page.render({canvasContext:c.getContext("2d"),viewport:v});
+document.querySelectorAll('.pdf-thumb').forEach(async canvas=>{
+  const pdf = await pdfjsLib.getDocument(canvas.dataset.pdf).promise;
+  const page = await pdf.getPage(1);
+  const viewport = page.getViewport({scale:0.6});
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+  page.render({canvasContext: canvas.getContext("2d"), viewport});
 });
 </script>
 
