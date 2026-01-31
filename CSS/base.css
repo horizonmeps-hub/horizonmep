@@ -248,6 +248,12 @@ footer{
   gap:24px;
 }
 
+footer a:hover{
+  background: linear-gradient(90deg, #3533cd, #f2701e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* --------------------
    Responsive Rules
 -------------------- */
