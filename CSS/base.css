@@ -120,12 +120,19 @@ header{
   color:#e5e7eb;
 }
 
-.nav-links a:hover{
+/* Gradient hover only for normal nav links */
+.nav-links a:not(.nav-cta):hover{
   background: linear-gradient(90deg, #3533cd, #f2701e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Keep CTA button intact */
+.nav-cta:hover{
+  background: linear-gradient(90deg, #3533cd, #f2701e);
+  color:#ffffff !important;
+  -webkit-text-fill-color: unset;
+}
 
 .nav-cta{
   padding:10px 16px;
