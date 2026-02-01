@@ -28,7 +28,16 @@
 .page-hero h1{font-size:clamp(32px,4vw,44px);margin-bottom:16px}
 .page-hero p{max-width:760px;font-size:18px;color:#e5e7eb}
 .project{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 36px rgba(15,23,42,0.08);margin-bottom:56px}
-.pdf-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:24px}
+.pdf-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:24px
+}
+@media(max-width:1024px){
+  .pdf-grid{grid-template-columns:1fr}
+}
+
 .pdf{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#f8fafc}
 .pdf canvas{width:100%;display:block}
 .pdf-label{padding:10px;text-align:center;font-size:14px;font-weight:600;background:white}
