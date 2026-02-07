@@ -331,3 +331,45 @@ footer a:hover{
     grid-template-columns:1fr;
   }
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.project-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.project-card h2 {
+  margin: 12px 0 6px;
+}
+
+.project-details {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.project-details div {
+  margin-bottom: 10px;
+}
+
+.project-card .btn-primary {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
