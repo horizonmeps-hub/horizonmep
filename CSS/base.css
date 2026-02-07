@@ -356,16 +356,33 @@ footer a:hover{
 }
 
 .project-card h2 {
-  margin: 12px 0 6px;
+  font-size: 26px;
+  margin-bottom: 6px;
 }
 
+/* Reduce middle section font size */
 .project-details {
-  margin: 20px 0;
-  line-height: 1.6;
+  font-size: 15px;          /* slightly smaller */
+  line-height: 1.65;        /* improve readability */
+  margin: 18px 0 22px;
+  color: #2d3748;           /* softer than pure black */
 }
 
+/* Labels (Project Type, Location, etc.) */
+.project-details strong {
+  font-weight: 600;
+  color: #111827;           /* darker for hierarchy */
+}
+
+/* Improve spacing between rows */
 .project-details div {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+/* Optional: slightly reduce meta text too */
+.project-card .meta {
+  font-size: 14px;
+  opacity: 0.85;
 }
 
 .project-card .btn-primary {
